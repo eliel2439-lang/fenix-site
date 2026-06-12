@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <title>Blog Oficial | Fênix Vedações</title>
+    
+    <link rel="icon" type="image/png" href="imagens/logo.png">
+    <link rel="canonical" href="https://www.fenixvedacoes.com.br/blog.html">
+    <meta name="description" content="Leia artigos técnicos completos sobre manutenção mecânica, retentores, gaxetas, anéis O-Ring e perfis esponjosos com a equipe técnica da Fênix Vedações.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ns: {
+                            primary: '#1E3A8A',
+                            primaryDark: '#1E40AF',
+                            accent: '#DC2626',
+                            green: '#16A34A',
+                            gray: '#f4f4f5',
+                            footer: '#0F172A',
+                            footerText: '#e2e8f0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen relative">
+
+    <!-- CABEÇALHO -->
+    <header class="bg-ns-primary text-white sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="block group" title="Voltar ao início">
+                <div class="h-16 flex items-center justify-center py-1">
+                    <img src="imagens/logo.png" alt="Fênix Vedações Logo" class="h-16 w-auto max-w-[200px] object-contain" onerror="this.style.display='none';">
+                </div>
+            </a>
+
+            <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wide font-medium">
+                <a href="index.html" class="nav-item cursor-pointer hover:text-white/80">Início</a>
+                <a href="quem-somos.html" class="nav-item cursor-pointer hover:text-white/80">Quem Somos</a>
+                <a href="produtos.html" class="nav-item cursor-pointer hover:text-white/80">Produtos</a>
+                <a href="segmentos.html" class="nav-item cursor-pointer hover:text-white/80">Segmentos</a>
+                <a href="blog.html" class="nav-item nav-item-active cursor-pointer">Blog</a>
+                <a href="contato.html" class="nav-item cursor-pointer hover:text-white/80">Contato</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-ns-primaryDark pb-4 px-6 border-t border-blue-800">
+            <a href="index.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Início</a>
+            <a href="quem-somos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Quem Somos</a>
+            <a href="produtos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Produtos</a>
+            <a href="segmentos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Segmentos</a>
+            <a href="blog.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Blog</a>
+            <a href="contato.html" class="block py-3 text-white font-medium">Contato</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <!-- SEÇÃO PRINCIPAL DO BLOG (LISTA DE CARDS) -->
+        <section id="secao-lista-blog" class="container mx-auto px-6 py-16">
+            <div class="text-center mb-16 reveal">
+                <h1 class="text-3xl md:text-4xl font-bold text-ns-primary uppercase">Blog Fênix Vedações</h1>
+                <div class="w-16 h-1 bg-ns-accent mx-auto mt-4"></div>
+                <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Artigos técnicos elaborados para otimizar os seus maquinários e evitar vazamentos na sua linha de produção.</p>
+            </div>
+
+            <!-- Grade de Artigos Expandidos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Artigo 1 -->
+                <article id="art-vazamentos" data-produto-id="prod-retentores" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full">
+                    <img src="imagens/blog_manutencao.jpeg" alt="Prevenção de Vazamentos" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Manutenção</span>
+                        <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight">A Importância das Vedações Industriais na Prevenção de Vazamentos</h3>
+                        <p class="text-sm text-gray-600 mb-6 line-clamp-4">Descubra como os retentores e anéis O-Ring evitam paradas catastróficas e prejuízos no ambiente industrial.</p>
+                        
+                        <button onclick="lerArtigo('art-vazamentos')" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1 self-start">
+                            Ler artigo completo <span class="text-lg">→</span>
+                        </button>
+                        
+                        <!-- Conteúdo Oculto para o Leitor Dinâmico -->
+                        <div class="artigo-completo hidden">
+                            <p>A <strong>vedação industrial</strong> desempenha um papel crucial e muitas vezes subestimado na manutenção de equipamentos e sistemas nas fábricas modernas. Um simples anel que falha pode ser o suficiente para parar uma linha de produção inteira, gerando enormes prejuízos. De fato, estimativas do setor de manutenção apontam que cerca de 40% das paradas não planejadas de maquinários rotativos ou hidráulicos são diretamente causadas por falhas em componentes elastoméricos de vedação.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">O Custo Oculto dos Vazamentos</h4>
+                            <p>Vazamentos não resultam apenas na perda de fluidos caros (como óleos hidráulicos sintéticos, fluidos refrigerantes ou compostos químicos). Eles também podem causar contaminação ambiental séria, gerar multas pesadas de órgãos fiscalizadores, e criar poças perigosas que colocam em risco direta a integridade física e a segurança dos colaboradores. Quando um retentor falha e deixa o óleo lubrificante escapar de um mancal, o rolamento interno começa a trabalhar a seco. Isso eleva a temperatura de atrito exponencialmente até causar o travamento total (fusão) do eixo, o que exige reparos estruturais caríssimos e demorados.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Estratégia da Manutenção Preventiva</h4>
+                            <p>A seleção correta de componentes como retentores e anéis O-Ring assegura que as partes móveis operem sob condições projetadas de atrito controlado e zero vazamento. Além de conter os fluidos no interior do sistema, os vedantes impedem a entrada de contaminantes externos agressivos, como poeira, areia, limalha metálica, umidade ou agentes químicos dispersos no ar.</p>
+                            <p>Substituir estas vedações preventivamente, de acordo com os ciclos de trabalho calculados (MTBF), custa apenas uma fração de uma intervenção corretiva de urgência. A borracha sofre fadiga mecânica e degradação térmica natural com o tempo, perdendo sua capacidade elástica de memória. Portanto, a inspeção visual diária, o monitoramento de temperatura nos mancais e a análise regular da presença de partículas no lubrificante são práticas essenciais para determinar o momento ideal de troca.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Solução Ideal</h4>
+                            <p>Investir em elastômeros de procedência certificada e contar com apoio técnico especializado faz toda a diferença. Na Fênix Vedações, analisamos detalhadamente as variáveis operacionais do seu equipamento — temperatura de pico, velocidades lineares ou rotativas, natureza química do fluido e pressão de trabalho — para recomendar ou desenvolver a geometria exata do vedante. Com compostos modernos como Viton de alta fluorização, Nitrílica hidrogenada (HNBR) ou Poliuretano usinado de alta densidade, garantimos que a sua planta opere com máxima produtividade e confiabilidade.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artigo 2 -->
+                <article id="art-oring" data-produto-id="prod-oring" class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full">
+                    <img src="imagens/blog_oring.jpeg" alt="Guia O-Ring" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Guias Técnicos</span>
+                        <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight">Guia Completo sobre Anéis O-Ring: Como Escolher o Material Ideal</h3>
+                        <p class="text-sm text-gray-600 mb-6 line-clamp-4">Diferenças químicas e físicas entre NBR, Viton, Silicone e EPDM para sistemas sob extrema pressão.</p>
+                        
+                        <button onclick="lerArtigo('art-oring')" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1 self-start">
+                            Ler artigo completo <span class="text-lg">→</span>
+                        </button>
+                        
+                        <div class="artigo-completo hidden">
+                            <p>Apesar de simples no seu design geométrico (um toro circular de borracha), os anéis O-Ring são um dos componentes de vedação mais críticos, eficientes e versáteis disponíveis na engenharia moderna. A sua eficácia não reside apenas no formato, mas depende inteiramente da escolha correta do elastômero em relação ao fluido, pressão e temperatura da aplicação.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Borracha Nitrílica (NBR)</h4>
+                            <p>É o material mais comum e económico do mercado. O NBR oferece excelente resistência a óleos minerais, graxas, água, fluidos hidráulicos convencionais e solventes alifáticos. É ideal para a grande maioria das aplicações standard de manutenção industrial, suportando temperaturas que variam geralmente entre -30°C e +100°C. No entanto, o NBR apresenta baixa resistência ao ozônio, intempéries e luz solar direta, além de degradar rapidamente se exposto a solventes polares, como acetona.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Viton® (FKM/FPM - Fluoroelastômero)</h4>
+                            <p>Quando a aplicação envolve temperaturas elevadas (até +200°C em regime contínuo, com picos de até +250°C) ou exposição a produtos químicos agressivos, o Viton é a melhor escolha. Ele apresenta excelente compatibilidade com combustíveis, hidrocarbonetos clorados, ácidos minerais fortes e óleos sintéticos pesados. Embora tenha um custo de aquisição superior, sua durabilidade em ambientes severos reduz significativamente o custo total de propriedade ao evitar trocas constantes.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Silicone (VMQ) e EPDM</h4>
+                            <p>O Silicone é preferido em situações de ampla amplitude térmica (de -50°C até +200°C) e é amplamente utilizado em conexões da linha sanitária, farmacêutica e alimentar (quando formulado como composto atóxico certificado pela FDA), pois não transmite cheiro, cor ou sabor aos fluidos. Já o EPDM é fantástico para vapor de água superaquecido, ozônio, intempéries e fluidos de freio à base de glicol. Todavia, o EPDM destrói-se e incha rapidamente se entrar em contato com óleos minerais ou derivados de petróleo.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Importância Crítica da Dureza (Shore A)</h4>
+                            <p>A dureza do material (geralmente medida na escala Shore A, variando tipicamente de 70 a 90 Shore A) determina a capacidade do anel de resistir à extrusão sob pressão. Sistemas com pressão de trabalho acima de 100 bar exigem anéis com dureza superior (90 Shore A) ou a adição de anéis anti-extrusão (Backup Rings) em teflon (PTFE) ou poliuretano para impedir que o elastômero seja empurrado e cortado nas folgas mecânicas dos alojamentos. A Fênix Vedações orienta você na escolha exata do material e da geometria para que sua máquina nunca sofra por quebras de vedação.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Artigo 3 -->
+                <article id="art-gaxetas" data-produto-id="prod-gaxetas" class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full">
+                    <img src="imagens/blog_cilindros.jpeg" alt="Cilindros Hidráulicos" class="w-full h-48 object-cover">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Hidráulica</span>
+                        <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight">Como as Gaxetas Prolongam a Vida Útil de Cilindros Hidráulicos</h3>
+                        <p class="text-sm text-gray-600 mb-6 line-clamp-4">Entenda o funcionamento dinâmico das gaxetas labiais sob alta pressão em cilindros industriais.</p>
+                        
+                        <button onclick="lerArtigo('art-gaxetas')" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1 self-start">
+                            Ler artigo completo <span class="text-lg">→</span>
+                        </button>
+                        
+                        <div class="artigo-completo hidden">
+                            <p>Os cilindros hidráulicos e pneumáticos são a espinha dorsal de maquinaria pesada, prensas industriais, empilhadores e equipamentos de elevação. E o coração pulsante deste sistema de força e movimento reside nas gaxetas, responsáveis por selar o fluido sob extrema pressão mecânica enquanto a haste se movimenta repetidamente de forma axial.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Dinâmica do Movimento Linear</h4>
+                            <p>Diferente de vedações estáticas (como tampas) ou rotativas (como eixos de motores), as gaxetas atuam num movimento linear contínuo. Elas possuem lábios flexíveis projetados inteligentemente para reagir à própria pressão do sistema: quanto maior a pressão do óleo hidráulico, mais os lábios da gaxeta se abrem e se firmam contra a haste ou a camisa do cilindro, criando uma vedação perfeita. Essa característica autovedante por pressão de contato dinâmico é o que torna a gaxeta insubstituível em sistemas de alta potência.</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Poliuretano vs. Nitrílica (NBR) em Aplicações Dinâmicas</h4>
+                            <p>Utilizar o material correto muda tudo. Para sistemas hidráulicos de alta pressão (acima de 150 bar), o Poliuretano (PU) é a escolha unânime das principais montadoras e técnicos de manutenção. O PU usinado ou moldado oferece uma resistência à abrasão, corte e rasgo incrivelmente superior à borracha tradicional, suportando picos de pressão sem extrudar. Já para sistemas pneumáticos (ar comprimido) ou de hidráulica leve e de baixa pressão, as gaxetas em Borracha Nitrílica (NBR) oferecem excelente elasticidade, menor coeficiente de atrito inicial e um deslize muito mais suave, reduzindo o efeito de travamento inicial (stick-slip).</p>
+                            <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Sinais de Desgaste e Prevenção Ativa</h4>
+                            <p>Substituir a gaxeta preventivamente evita que o óleo hidráulico contaminado com micropartículas abrasivas atue como uma lixa entre o lábio de vedação e as superfícies metálicas móveis. Se o lábio se desgasta e ocorre o contato metal-metal entre o êmbolo e a camisa, riscos profundos e permanentes serão gerados na superfície cromada da haste. Uma haste riscada destrói qualquer gaxeta nova em poucos ciclos, obrigando a empresa a gastar com cromeação, retífica ou até com a troca completa da haste e da camisa do cilindro hidráulico.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Adicione mais artigos seguindo a mesma estrutura se necessário -->
+
+            </div>
+        </section>
+
+        <!-- LEITOR INTERATIVO DE ARTIGOS (OCULTO POR PADRÃO) -->
+        <section id="ler-artigo-container" class="page-section bg-white hidden">
+            <div class="container mx-auto px-6 py-16 max-w-4xl">
+                <!-- Botão Voltar -->
+                <button onclick="fecharLeitorArtigo()" class="text-ns-primary font-bold mb-8 hover:underline flex items-center gap-2 transition-transform transform hover:-translate-x-2">
+                    <span class="text-lg">←</span> Voltar para todos os artigos
+                </button>
+                
+                <span id="ler-categoria" class="text-sm font-bold text-ns-accent uppercase tracking-wider mb-2 block">Categoria</span>
+                <h1 id="ler-titulo" class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">Título do Artigo</h1>
+                
+                <div id="ler-conteudo" class="prose max-w-none text-base md:text-lg text-gray-700 leading-relaxed space-y-6 text-justify mb-10">
+                    <!-- Conteúdo dinâmico injetado via script.js -->
+                </div>
+
+                <!-- CTA Dinâmico -->
+                <div id="ler-cta-produto-container" class="mb-10 p-6 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4 hidden">
+                    <div>
+                        <h4 class="font-bold text-ns-primary text-lg">🚀 Produto Relacionado</h4>
+                        <p class="text-sm text-gray-600">Explore nossa linha completa de <span id="ler-cta-produto-nome" class="font-bold text-ns-accent"></span> direto de fábrica.</p>
+                    </div>
+                    <button id="ler-cta-produto-btn" class="bg-ns-primary hover:bg-ns-primaryDark text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider whitespace-nowrap transition-colors">
+                        Ver no Catálogo
+                    </button>
+                </div>
+                
+                <div class="mt-10 pt-10 border-t border-gray-200 text-center bg-gray-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-ns-primary mb-4">A sua máquina não pode parar.</h3>
+                    <p class="text-gray-600 mb-6">Precisa de peças técnicas, anéis ou gaxetas para manutenção? Fale com a Fênix Vedações.</p>
+                    <a href="https://wa.me/5511982081987" target="_blank" rel="noopener noreferrer" class="inline-block bg-ns-green text-white px-10 py-4 rounded-lg font-bold text-base uppercase tracking-wide hover:bg-green-700 transition shadow-md">Falar com um especialista no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-ns-footer text-ns-footerText pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Fênix Vedações</h3>
+                <p class="text-sm text-gray-400">Atuando desde 2003 no fornecimento de soluções de alta qualidade em vedações industriais.</p>
+            </div>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Links rápidos</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+                    <li><a href="quem-somos.html" class="hover:text-white transition">Quem Somos</a></li>
+                    <li><a href="produtos.html" class="hover:text-white transition">Produtos</a></li>
+                    <li><a href="segmentos.html" class="hover:text-white transition">Segmentos</a></li>
+                    <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="contato.html" class="hover:text-white transition">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Contato</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#25D366]">📞</span>
+                        <a href="https://wa.me/5511982081987" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">WhatsApp: (11) 98208-1987</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-gray-300">✉️</span>
+                        <span class="break-words whitespace-nowrap">fenixvedacoes2@terra.com.br</span>
+                    </li>
+                    <li class="flex items-center gap-3"><span class="text-ns-accent">📍</span>Itaquera, São Paulo - SP</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Atendimento</h3>
+                <p class="text-sm text-gray-400">Segunda a Quinta: 08:30 às 16:30<br>Sexta: 08:30 às 15:30</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+            <p>© 2026 Fênix Vedações – Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/5511982081987?text=Olá!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-2xl transition duration-300 hover:scale-110 flex items-center justify-center group" title="Fale conosco no WhatsApp">
+        <svg class="w-8 h-8" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.1 56.8 2.1 3.1 39.3 60 95.3 84.1 13.3 5.7 23.7 9.1 31.9 11.7 13.4 4.3 25.7 3.7 35.5 2.2 10.9-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+        <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping -z-10 group-hover:opacity-0 transition-opacity"></span>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,1913 +1,330 @@
 <!DOCTYPE html>
-    <html lang="pt-br">
-		<head>
-			
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Força os navegadores a manterem o modo claro no celular (Evita inversão automática de cores) -->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light">
-		<meta name="google-site-verification" content="C7tlTZr32uWE-50yWu1GZdPkH0NP5IJbYfTe" />
+    <title>Fênix Vedações | Soluções em Vedações Industriais</title>
     
-					<title>Fênix Vedações - Retentores, Gaxetas e O-Rings</title>
-    <!-- Favicon para a SERP do Google e Navegadores -->
-	<!-- Updated: Force GitHub Pages rebuild -->
     <link rel="icon" type="image/png" href="imagens/logo.png">
+    <link rel="canonical" href="https://www.fenixvedacoes.com.br/">
+    <meta name="description" content="Fabricante de retentores, gaxetas, o-rings e soluções personalizadas em vedações industriais.">
     
-    <!-- Canonical SEO Oficial Corrigido (Evita duplicação) -->
-                                    <link rel="canonical" href="https://www.fenixvedacoes.com.br/">
-    
-    <!-- Meta Description Única para SEO -->
-	<meta name="description" content="Fênix Vedações - Fabricante de retentores, gaxetas, anéis O-Ring e peças técnicas em borracha. Soluções em vedações industriais para sistemas hidráulicos, pneumáticos e equipamentos. Orçamentos rápidos!">    
-	<script type="application/ld+json">
-		[
+    <!-- SCHEMA MARKUP (JSON-LD) - SEO AVANÇADO -->
+    <script type="application/ld+json">
+    [
       {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Fênix Vedações",
-                "url": "https://fenixvedacoes.com.br",
-                "logo": "https://fenixvedacoes.com.br/imagens/logo.png",
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+55-11-98208-1987",
-          "contactType": "sales",
-          "areaServed": "BR",
-          "availableLanguage": "Portuguese"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Fênix Vedações",
-        "image": "https://www.fenixvedacoes.com.br/imagens/hero.png",
-        "telephone": "+55-11-98208-1987",
-        "email": "fenixvedacoes2@terra.com.br",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Itaquera",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "addressCountry": "BR"
-        },
-                              "url": "https://fenixvedacoes.com.br/#produtos"
-        "areaServed": {
-            "@type": "AdministrativeArea",
-            "name": "São Paulo"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday"
-            ],
-            "opens": "08:30",
-            "closes": "16:30"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Friday"
-            ],
-            "opens": "08:30",
-            "closes": "15:30"
-          }
-        ]
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Soluções em Vedações Industriais",
-        "description": "Retentores, Gaxetas, O-Rings e peças técnicas sob medida direto da fábrica.",
-        "brand": {
-          "@type": "Brand",
-          "name": "Fênix Vedações"
-        },
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock",
-                      "url": "https://fenixvedacoes.com.br/#produtos"
-        }
+        "url": "https://www.fenixvedacoes.com.br",
+        "logo": "https://www.fenixvedacoes.com.br/imagens/logo.png"
       }
     ]
     </script>
 
     <!-- Carregando Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Configuração de Cores da Marca -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
                         ns: {
-                            primary: '#1E3A8A',    /* Azul Principal */
-                            primaryDark: '#1E40AF',/* Azul Escuro (Hover) */
-                            accent: '#DC2626',     /* Vermelho Destaque */
-                            green: '#16A34A',      /* Verde WhatsApp */
-                            gray: '#f4f4f5',       /* Fundo Cinza Claro */
-                            footer: '#0F172A',     /* Azul Escuro Footer */
-                            footerText: '#e2e8f0'  /* Texto Claro */
+                            primary: '#1E3A8A',
+                            primaryDark: '#1E40AF',
+                            accent: '#DC2626',
+                            green: '#16A34A',
+                            gray: '#f4f4f5',
+                            footer: '#0F172A',
+                            footerText: '#e2e8f0'
                         }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Segoe UI', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
     
-    <!-- Fonte Google Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        
-        /* Estilos para a navegação SPA */
-        .page-section {
-            display: none;
-            animation: fadeIn 0.4s ease-in-out;
-        }
-        .page-section.active {
-            display: block;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Estilo do Menu Ativo */
-        .nav-item.active {
-            color: #ffffff;
-            font-weight: 700;
-            border-bottom: 2px solid white;
-        }
-        .nav-item {
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        /* Ocultar barra de rolagem no carrossel, mas manter funcionalidade */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        /* --- CLASSE DE REVELAÇÃO SUAVE (REVEAL ON SCROLL) --- */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: transform, opacity;
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Tempos de Atraso (Delays) para Efeito Cascata */
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; }
-
-        /* --- CLASSE PREMIUM DE EFEITO DE MOUSE EM TODOS OS CARDS --- */
-        .card-hover {
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            will-change: transform, box-shadow;
-        }
-        .card-hover:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.12), 0 10px 10px -5px rgba(30, 58, 138, 0.06);
-            border-color: rgba(30, 58, 138, 0.3) !important;
-        }
-
-        /* --- FORÇA O DESIGN CLARO EM CELULARES QUE ATIVAM O MODO ESCURO AUTOMÁTICO --- */
-        @media (prefers-color-scheme: dark) {
-            body, .bg-white {
-                background-color: #ffffff !important;
-                color: #1f2937 !important;
-            }
-            .bg-gray-50 {
-                background-color: #f9fafb !important;
-            }
-            .text-gray-600 {
-                color: #4b5563 !important;
-            }
-            .text-gray-900, .text-gray-950 {
-                color: #111827 !important;
-            }
-            .border-gray-200 {
-                border-color: #e5e7eb !important;
-            }
-            .bg-gray-50, .bg-gray-50\/60 {
-                background-color: #f9fafb !important;
-            }
-            h1, h2, h3, h4, h5, p, span, strong {
-                text-decoration-color: inherit !important;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white text-gray-800 flex flex-col min-h-screen relative">
 
     <!-- CABEÇALHO -->
     <header class="bg-ns-primary text-white sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-6 h-20 flex justify-between items-center">
-            <!-- Logo -->
-            <a href="#inicio" onclick="navegar('inicio'); return false;" class="block group" title="Voltar ao início">
+            <a href="index.html" class="block group" title="Voltar ao início">
                 <div class="h-16 flex items-center justify-center py-1">
                     <img src="imagens/logo.png" alt="Fênix Vedações Logo" class="h-16 w-auto max-w-[200px] object-contain" onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');">
-                    <div class="h-16 w-36 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/40 text-xs uppercase tracking-widest font-bold hover:bg-white/10 transition-all hidden">
-                        [ LOGO ]
-                    </div>
+                    <div class="h-16 w-36 border-2 border-dashed border-white/40 rounded-lg flex items-center justify-center text-white/40 text-xs uppercase tracking-widest font-bold hidden">[ LOGO ]</div>
                 </div>
             </a>
 
-            <!-- Menu Desktop (Segmentos removido) -->
+            <!-- Navegação Física -->
             <nav class="hidden md:flex space-x-6 text-sm uppercase tracking-wide font-medium">
-                <a href="#inicio" onclick="navegar('inicio'); return false;" id="nav-inicio" class="nav-item active cursor-pointer hover:text-white/80">Início</a>
-                <a href="#quem-somos" onclick="navegar('quem-somos'); return false;" id="nav-quem-somos" class="nav-item cursor-pointer hover:text-white/80">Quem Somos</a>
-                <a href="#produtos" onclick="navegar('produtos'); return false;" id="nav-produtos" class="nav-item cursor-pointer hover:text-white/80">Produtos</a>
-                <a href="#segmentos" onclick="navegar('segmentos'); return false;" id="nav-segmentos" class="nav-item cursor-pointer hover:text-white/80">Segmentos</a>
-                <a href="#blog" onclick="navegar('blog'); return false;" id="nav-blog" class="nav-item cursor-pointer hover:text-white/80">Blog</a>
-                <a href="#contato" onclick="navegar('contato'); return false;" id="nav-contato" class="nav-item cursor-pointer hover:text-white/80">Contato</a>
+                <a href="index.html" class="nav-item nav-item-active cursor-pointer">Início</a>
+                <a href="quem-somos.html" class="nav-item cursor-pointer hover:text-white/80">Quem Somos</a>
+                <a href="produtos.html" class="nav-item cursor-pointer hover:text-white/80">Produtos</a>
+                <a href="segmentos.html" class="nav-item cursor-pointer hover:text-white/80">Segmentos</a>
+                <a href="blog.html" class="nav-item cursor-pointer hover:text-white/80">Blog</a>
+                <a href="contato.html" class="nav-item cursor-pointer hover:text-white/80">Contato</a>
             </nav>
 
-            <!-- Menu Mobile -->
-            <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
         
-        <!-- Menu Mobile Dropdown (Segmentos removido) -->
+        <!-- Dropdown Mobile -->
         <div id="mobile-menu" class="hidden md:hidden bg-ns-primaryDark pb-4 px-6 border-t border-blue-800">
-            <a href="#inicio" onclick="navegar('inicio'); return false;" class="block py-3 border-b border-blue-800/50 text-white font-medium">Início</a>
-            <a href="#quem-somos" onclick="navegar('quem-somos'); return false;" class="block py-3 border-b border-blue-800/50 text-white font-medium">Quem Somos</a>
-            <a href="#produtos" onclick="navegar('produtos'); return false;" class="block py-3 border-b border-blue-800/50 text-white font-medium">Produtos</a>
-            <a href="#segmentos" onclick="navegar('segmentos'); return false;" class="block py-3 border-b border-blue-800/50 text-white font-medium">Segmentos</a>
-            <a href="#blog" onclick="navegar('blog'); return false;" class="block py-3 border-b border-blue-800/50 text-white font-medium">Blog</a>
-            <a href="#contato" onclick="navegar('contato'); return false;" class="block py-3 text-white font-medium">Contato</a>
+            <a href="index.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Início</a>
+            <a href="quem-somos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Quem Somos</a>
+            <a href="produtos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Produtos</a>
+            <a href="segmentos.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Segmentos</a>
+            <a href="blog.html" class="block py-3 border-b border-blue-800/50 text-white font-medium">Blog</a>
+            <a href="contato.html" class="block py-3 text-white font-medium">Contato</a>
         </div>
     </header>
 
-    <!-- ÁREA DE CONTEÚDO PRINCIPAL -->
+    <!-- ÁREA PRINCIPAL -->
     <main class="flex-grow">
-
-        <!-- 1. INÍCIO -->
-        <section id="inicio" class="page-section active">
-            <!-- HERO -->
-            <div class="container mx-auto px-6 py-12 md:py-20">
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                    <div class="w-full md:w-[45%] text-center md:text-left reveal">
-                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-ns-primary leading-tight mb-4 uppercase">
-                            Retentores, O-Ring, Gaxetas e <span class="text-ns-accent">Vedações Industriais</span>
-                        </h1>
-                        <h2 class="text-base md:text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0 font-light leading-relaxed">
-                            <strong>Especializado em peças técnicas</strong>, conforme desenho ou amostra.
-                        </h2>
-                        <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" rel="noopener noreferrer" class="inline-block bg-ns-primary text-white px-8 py-3 rounded font-bold text-base uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-lg transform hover:-translate-y-1">
-                            SOLICITAR COTAÇÃO
-                        </a>
-                    </div>
-                    <!-- Vídeo Hero com h-[220px] no mobile e h-[400px] no desktop -->
-                    <div class="w-full md:w-[55%] relative reveal delay-200">
-                        <video class="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover rounded-lg shadow-md" 
-                               autoplay 
-                               loop 
-                               muted 
-                               playsinline 
-                               poster="imagens/hero.png"
-                               onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden'); this.nextElementSibling.classList.add('flex');">
-                            <source src="videos/hero.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeos.
-                        </video>
-                        <!-- Fallback visual dinâmico (caso o vídeo e poster falhem) -->
-                        <div class="w-full h-[220px] sm:h-[300px] md:h-[400px] bg-gray-100 rounded-lg border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400 font-medium text-sm hidden">
-                            [ Vídeo de Apresentação Hero ]
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARROSSEL DE PRODUTOS (NA HOME) -->
-            <div class="bg-gray-50 py-16">
-                <div class="container mx-auto px-6">
-                    <div class="mb-10 text-center md:text-left reveal">
-                        <h2 class="text-3xl font-extrabold text-ns-primary uppercase mb-2">Produtos em Destaque</h2>
-                        <h3 class="text-lg text-gray-600 font-light">Retentores, gaxetas, anéis O-Ring e peças técnicas para vedação industrial em sistemas hidráulicos, pneumáticos e equipamentos industriais.</h3>
-                        <div class="w-20 h-1 bg-ns-accent mt-4 mx-auto md:mx-0"></div>
-                    </div>
-
-                    <div class="relative group reveal delay-100">
-                        <!-- Botão Anterior Produtos -->
-                        <button id="prevBtnProd" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-white border border-gray-200 text-ns-primary p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all hidden md:flex">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-                        </button>
-
-                        <!-- Track do Carrossel Produtos -->
-                        <div class="overflow-hidden rounded-xl p-2 -m-2">
-                            <div id="carouselTrackProd" class="flex transition-transform duration-500 ease-out">
-                                
-                                <!-- Produto 1 -->
-                                <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
-                                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                                        <div class="relative w-full h-48">
-                                            <img src="imagens/retentores.jpeg" alt="Retentores" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Retentores ]</div>
-                                        </div>
-                                        <div class="p-6 flex flex-col flex-grow">
-                                            <h3 class="text-xl font-bold text-ns-primary mb-3">Retentores</h3>
-                                            <p class="text-sm text-gray-600 flex-grow mb-6">Vedação dinâmica ideal para eixos rotativos, protegendo contra vazamentos e sujeiras.</p>
-                                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Retentores" target="_blank" rel="noopener noreferrer" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-sm block text-center">SOLICITAR ORÇAMENTO</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Produto 2 -->
-                                <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
-                                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                                        <div class="relative w-full h-48">
-                                            <img src="imagens/gaxetas.jpeg" alt="Gaxetas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Gaxetas ]</div>
-                                        </div>
-                                        <div class="p-6 flex flex-col flex-grow">
-                                            <h3 class="text-xl font-bold text-ns-primary mb-3">Gaxetas</h3>
-                                            <p class="text-sm text-gray-600 flex-grow mb-6">Soluções robustas em vedações para sistemas hidráulicos e pneumáticos.</p>
-                                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Gaxetas" target="_blank" rel="noopener noreferrer" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-sm block text-center">SOLICITAR ORÇAMENTO</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Produto 3 -->
-                                <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
-                                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                                        <div class="relative w-full h-48">
-                                            <img src="imagens/oring.jpeg" alt="Anéis O-Ring" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Anéis O-Ring ]</div>
-                                        </div>
-                                        <div class="p-6 flex flex-col flex-grow">
-                                            <h3 class="text-xl font-bold text-ns-primary mb-3">Anéis O-Ring</h3>
-                                            <p class="text-sm text-gray-600 flex-grow mb-6">Vedações estática e dinâmica extremamente versátil e resistente para diversas aplicações.</p>
-                                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Anéis%20O-Ring" target="_blank" rel="noopener noreferrer" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-sm block text-center">SOLICITAR ORÇAMENTO</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Produto 4 -->
-                                <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
-                                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                                        <div class="relative w-full h-48">
-                                            <img src="imagens/raspadores.jpeg" alt="Raspadores" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Raspadores ]</div>
-                                        </div>
-                                        <div class="p-6 flex flex-col flex-grow">
-                                            <h3 class="text-xl font-bold text-ns-primary mb-3">Raspadores</h3>
-                                            <p class="text-sm text-gray-600 mb-6 flex-grow text-gray-600">Proteção essencial contra a entrada de impurezas em cilindros e hastes.</p>
-                                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Raspadores" target="_blank" rel="noopener noreferrer" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-sm block text-center">SOLICITAR ORÇAMENTO</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Produto 5 -->
-                                <div class="min-w-full md:min-w-[50%] lg:min-w-[33.333%] px-3">
-                                    <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                                        <div class="relative w-full h-48">
-                                            <img src="imagens/pecas.jpeg" alt="Peças Técnicas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Peças Técnicas ]</div>
-                                        </div>
-                                        <div class="p-6 flex flex-col flex-grow">
-                                            <h3 class="text-xl font-bold text-ns-primary mb-3">Peças Técnicas</h3>
-                                            <p class="text-sm text-gray-600 mb-6 flex-grow flex-grow">Desenvolvimento de peças especiais em borracha sob medida conforme desenho ou amostra.</p>
-                                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Peças%20Técnicas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <!-- Botão Próximo Produtos -->
-                        <button id="nextBtnProd" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-white border border-gray-200 text-ns-primary p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all hidden md:flex">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-                        </button>
-                    </div>
-
-                    <!-- BOTÃO INTELIGENTE DE "VER TODOS OS PRODUTOS" -->
-                    <div class="text-center mt-10 reveal delay-200">
-                        <a href="#produtos" onclick="navegar('produtos'); return false;" class="inline-block bg-ns-primary text-white px-8 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition-colors shadow-md transform hover:-translate-y-0.5">
-                            Ver todos os produtos
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEÇÃO DE AVALIAÇÕES ESTÁTICAS -->
-            <div class="bg-gray-50 py-16 border-t border-gray-200">
-                <div class="container mx-auto px-6">
-                    <div class="mb-10 text-center reveal">
-                        <p class="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</p>
-                        <h2 class="text-3xl font-extrabold text-ns-primary uppercase">O que os nossos clientes dizem</h2>
-                        <div class="w-20 h-1 bg-ns-accent mt-4 mx-auto"></div>
-                    </div>
-
-                    <!-- Grade Estática Disposta Lado a Lado (Exibição Perfeita Sem Rotação) -->
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto reveal">
-                        
-                        <!-- Avaliação 1 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="flex text-yellow-400 mb-3 text-sm">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <p class="text-gray-600 italic text-sm mb-4">"Atendimento excelente! Precisávamos de um lote de retentores sob medida para uma prensa que parou a produção. A equipe da Fênix Vedações nos atendeu com muita agilidade e entregou as peças no mesmo dia."</p>
-                            </div>
-                            <div class="border-t border-gray-100 pt-3 mt-2">
-                                <p class="font-bold text-ns-primary text-sm">— Marcelo Silva</p>
-                                <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">
-                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                                    Avaliação no Google
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Avaliação 2 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="flex text-yellow-400 mb-3 text-sm">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <p class="text-gray-600 italic text-sm mb-4">"Empresa séria e comprometida. Encontrei gaxetas e anéis O-Ring com medidas difíceis de achar no mercado convencional. O atendimento técnico tirou todas as minhas dúvidas sobre os elastômeros."</p>
-                            </div>
-                            <div class="border-t border-gray-100 pt-3 mt-2">
-                                <p class="font-bold text-ns-primary text-sm">— Ana Paula Souza</p>
-                                <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">
-                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                                    Avaliação no Google
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Avaliação 3 -->
-                        <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
-                            <div>
-                                <div class="flex text-yellow-400 mb-3 text-sm">
-                                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                                </div>
-                                <p class="text-gray-600 italic text-sm mb-4">"Parceiros de longa data! Sempre que precisamos de desenvolvimento de peças técnicas sob amostra, eles entregam com precisão milimétrica. Preço justo e ótima qualidade na borracha."</p>
-                            </div>
-                            <div class="border-t border-gray-100 pt-3 mt-2">
-                                <p class="font-bold text-ns-primary text-sm">— Ricardo Mendes</p>
-                                <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">
-                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                                    Avaliação no Google
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- CARROSSEL DE LOGOS DE EMPRESAS -->
-            <div class="bg-white py-16 border-t border-gray-100">
-                <div class="container mx-auto px-6">
-                    <div class="mb-10 text-center reveal">
-                        <h2 class="text-2xl md:text-3xl font-extrabold text-ns-primary uppercase">Empresas e indústrias atendidas pela Fênix Vedações</h2>
-                        <div class="w-20 h-1 bg-ns-accent mt-4 mx-auto"></div>
-                    </div>
-
-                    <div class="relative group max-w-6xl mx-auto reveal">
-                        <!-- Track do Carrossel Logos -->
-                        <div class="overflow-hidden p-2 -m-2">
-                            <div id="carouselTrackLogos" class="flex transition-transform duration-500 ease-out items-center">
-                                
-                                <!-- Card 1 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa1.jpeg" alt="Logo Empresa 1" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 1 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 2 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa2.jpeg" alt="Logo Empresa 2" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 2 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 3 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa3.jpeg" alt="Logo Empresa 3" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 3 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 4 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa4.jpeg" alt="Logo Empresa 4" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 4 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 5 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa5.jpeg" alt="Logo Empresa 5" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 5 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 6 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa6.jpeg" alt="Logo Empresa 6" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 6 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 7 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa7.jpeg" alt="Logo Empresa 7" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 7 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 8 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa8.jpeg" alt="Logo Empresa 8" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 8 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 9 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa9.jpeg" alt="Logo Empresa 9" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 9 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 10 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa10.jpeg" alt="Logo Empresa 10" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 10 ]</span>
-                                    </div>
-                                </div>
-
-                                <!-- Card 11 -->
-                                <div class="min-w-[50%] md:min-w-[33.333%] lg:min-w-[25%] px-3">
-                                    <div class="bg-white border border-gray-200 shadow-md rounded-2xl flex flex-col items-center justify-center p-6 h-44 md:h-52 w-full hover:shadow-lg hover:border-ns-primary/20 transition-all duration-300">
-                                        <img src="imagens/empresa11.jpeg" alt="Logo Empresa 11" class="max-h-24 md:max-h-28 lg:max-h-32 object-contain" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                        <span class="text-gray-400 text-xs font-semibold uppercase tracking-wider hidden text-center">[ Empresa 11 ]</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </section>
-
-        <!-- 2. QUEM SOMOS -->
-        <section id="quem-somos" class="page-section">
-            <div class="container mx-auto px-6 py-16">
-                <div class="text-center mb-12 reveal">
-                    <h2 class="text-3xl font-bold text-ns-primary uppercase">SOBRE A FÊNIX VEDAÇÕES</h2>
-                    <div class="w-16 h-1 bg-ns-accent mx-auto mt-4"></div>
-                </div>
-                <div class="max-w-5xl mx-auto space-y-12">
-                    <div class="text-gray-700 leading-relaxed space-y-6 text-lg text-center md:text-left max-w-4xl mx-auto reveal delay-100">
-                        <p>A Fênix Vedações nasceu em 10 de setembro de 2003 com o compromisso de oferecer soluções de qualidade em vedações industriais, atendendo empresas e profissionais que buscam produtos resistentes, eficientes e com excelente desempenho.</p>
-                        
-                        <h3 class="text-2xl font-bold text-ns-primary mt-6 mb-2">Especialistas em Vedação Industrial</h3>
-                        <p>Desde o início, a Fênix Vedações atua no fornecimento de retentores, gaxetas, anéis O-Ring, raspadores, peças técnicas, linha sanitária e diversos componentes para manutenção industrial e sistemas de vedação. Trabalhando com seriedade, compromisso e atendimento especializado, a empresa vem conquistando a confiança de clientes de diferentes segmentos industriais.</p>
-                        
-                        <h3 class="text-2xl font-bold text-ns-primary mt-6 mb-2">Fabricante de Retentores, Gaxetas e Anéis O-Ring</h3>
-                        <p>Com experiência no mercado e foco na qualidade, a Fênix Vedações busca sempre oferecer produtos que atendam às necessidades de cada cliente, garantindo eficiência, durabilidade e soluções para diferentes aplicações industriais. Trabalhamos com peças técnicas desenvolvidas conforme desenho ou amostra, atendendo sistemas hidráulicos, pneumáticos e equipamentos industriais com alta performance em vedação industrial.</p>
-                    </div>
-                    
-                    <div class="bg-ns-gray p-8 rounded-lg shadow-sm border border-gray-200 reveal delay-200">
-                        <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-                            <div class="space-y-3 reveal delay-100">
-                                <h4 class="text-lg font-bold text-ns-primary uppercase flex items-center justify-center md:justify-start gap-2">
-                                    <span class="text-2xl">🎯</span> Missão
-                                </h4>
-                                <p class="text-sm text-gray-600">Oferecer soluções em vedações industriais com qualidade, confiança e atendimento especializado, atendendo as necessidades de cada cliente com eficiência e compromisso.</p>
-                            </div>
-                            <div class="space-y-3 reveal delay-200">
-                                <h4 class="text-lg font-bold text-ns-primary uppercase flex items-center justify-center md:justify-start gap-2">
-                                    <span class="text-2xl">👁️</span> Visão
-                                </h4>
-                                <p class="text-sm text-gray-600">Ser referência no segmento de vedações industriais, destacando-se pela qualidade dos produtos, excelência no atendimento e confiança conquistada junto aos clientes.</p>
-                            </div>
-                            <div class="space-y-3 reveal delay-300">
-                                <h4 class="text-lg font-bold text-ns-primary uppercase flex items-center justify-center md:justify-start gap-2">
-                                    <span class="text-2xl">💼</span> Valores
-                                </h4>
-                                <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Qualidade em produtos e serviços</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Compromisso com o cliente</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Transparência e confiança</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Atendimento especializado</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Respeito e responsabilidade</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Busca constante por melhoria</li>
-                                    <li class="flex items-start gap-2"><svg class="w-4 h-4 text-ns-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Eficiência e agilidade no atendimento</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        <!-- 3. PRODUTOS -->
-        <section id="produtos" class="page-section">
-            <div class="container mx-auto px-6 py-16">
-                <!-- TÍTULO ATUALIZADO CONFORME SOLICITADO PARA ARDENTE SEO -->
-                <div class="text-center mb-16 reveal">
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-ns-primary uppercase tracking-tight">
-                        Vedações Industriais: Retentores, Gaxetas, Anéis O-Ring e Peças Técnicas
+        <!-- HERO -->
+        <div class="container mx-auto px-6 py-12 md:py-20">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="w-full md:w-[45%] text-center md:text-left reveal">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-ns-primary leading-tight mb-4 uppercase">
+                        Retentores, O-Ring, Gaxetas e <span class="text-ns-accent">Vedações Industriais</span>
                     </h1>
-                    <div class="w-16 h-1 bg-ns-accent mx-auto mt-4"></div>
-                    <h2 class="text-lg md:text-xl text-gray-700 font-semibold mt-4 max-w-3xl mx-auto leading-relaxed">
-                        Soluções em vedação industrial para sistemas hidráulicos, pneumáticos, automotivos e equipamentos industriais de alta performance.
+                    <h2 class="text-base md:text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0 font-light leading-relaxed">
+                        <strong>Especializado em peças técnicas</strong>, conforme desenho ou amostra.
                     </h2>
-                    <h3 class="text-sm md:text-base text-gray-500 font-medium mt-2 max-w-2xl mx-auto">
-                        Fabricação de retentores, gaxetas, raspadores e peças técnicas conforme desenho ou amostra.
-                    </h3>
+                    <a href="https://wa.me/5511982081987?text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" rel="noopener noreferrer" class="inline-block bg-ns-primary text-white px-8 py-3 rounded font-bold text-base uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-lg transform hover:-translate-y-1">SOLICITAR COTAÇÃO</a>
                 </div>
-
-                <!-- GRADE DE PRODUTOS ATUALIZADA (SEM LINHA DE SEGMENTOS E SEM LINK INTERATIVO NO TÍTULO) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                    
-                    <!-- Produto 1: Retentores Industriais -->
-                    <div id="prod-retentores" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/retentores.jpeg" alt="Retentores" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Retentores ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <!-- Título padrão não-clicável em preto elegante -->
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">Retentores Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Cilindros hidráulicos, bombas, motores, prensas e máquinas industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">NBR, Viton, Silicone, EPDM e Poliuretano.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta resistência, vedação eficiente, redução de manutenção e maior vida útil.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Retentores" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 2: Gaxetas Industriais -->
-                    <div id="prod-gaxetas" class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/gaxetas.jpeg" alt="Gaxetas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Gaxetas ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">Gaxetas Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Sistemas hidráulicos, cilindros pneumáticos, prensas e equipamentos industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">PU, borracha nitrílica, PTFE, Silicone e EPDM.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Excelente capacidade de vedação, alta durabilidade e resistência ao desgaste.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Gaxetas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 3: Anéis O-Ring -->
-                    <div id="prod-oring" class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/oring.jpeg" alt="Anéis O-Ring" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Anéis O-Ring ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">Anéis O-Ring</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Sistemas hidráulicos, conexões industriais, válvulas e equipamentos pneumáticos.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">NBR, Viton, Silicone, EPDM e Teflon.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Vedação estática e dinâmica com alta eficiência e resistência química.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Anéis%20O-Ring" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 4: Raspadores Industriais -->
-                    <div id="prod-raspadores" class="reveal delay-300 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/raspadores.jpeg" alt="Raspadores" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Raspadores ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-955 mb-4">Raspadores Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Cilindros hidráulicos, hastes e equipamentos industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Poliuretano, NBR e PTFE.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Proteção contra poeira, resíduos e partículas abrasivas.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Raspadores" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 5: Cordões de Vedação -->
-                    <div id="prod-cordoes" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/cordoes.jpeg" alt="Cordões" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Cordões ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-955 mb-4">Cordões de Vedação</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Confecção de anéis sob medida, vedação industrial e manutenção técnica.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Silicone, Viton, EPDM, NBR e Neoprene.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta flexibilidade, resistência térmica e excelente vedação.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Cordões" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 6: Perfis de Vedação -->
-                    <div id="prod-perfis" class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/perfis.jpeg" alt="Perfis de Vedação" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Perfis de Vedação ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-950 mb-4">Perfis de Vedação</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Portas industriais, painéis, máquinas e equipamentos.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">EPDM, Silicone, PVC e borracha expandida.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Vedação eficiente contra poeira, água e vibração.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Perfis%20de%20Vedação" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 7: Peças Técnicas em Borracha -->
-                    <div id="prod-pecas" class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/pecas.jpeg" alt="Peças Técnicas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Peças Técnicas ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-955 mb-4">Peças Técnicas em Borracha</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Equipamentos industriais, sistemas hidráulicos e componentes especiais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">NBR, Silicone, Viton, PU e EPDM.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Produção sob medida conforme desenho técnico ou amostra.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Peças%20Técnicas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 8: Arruelas Industriais -->
-                    <div id="prod-arruelas" class="reveal delay-300 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/arruelas.jpeg" alt="Arruelas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Arruelas ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-955 mb-4">Arruelas Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Fixação, vedação e apoio em sistemas industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Borracha nitrílica, nylon, PTFE e poliuretano.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta resistência mecânica e redução de desgaste.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Arruelas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 9: Buchas Industriais -->
-                    <div id="prod-buchas" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/buchas.jpeg" alt="Buchas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Buchas ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-950 mb-4">Buchas Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Amortecimento, centralização e redução de atrito.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Poliuretano, nylon e elastômeros industriais.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Maior estabilidade, resistência e absorção de impacto.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Buchas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 10: Diafragmas Industriais -->
-                    <div id="prod-diafragmas" class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/diafragmas.jpeg" alt="Diafragmas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Diafragmas ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-950 mb-4">Diafragmas Industriais</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Bombas, válvulas e controle de fluidos industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Borracha nitrílica, EPDM, Silicone e PTFE.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta flexibilidade, resistência química e vedação eficiente.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Diafragmas" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 11: Linha Industrial -->
-                    <div id="prod-industrial" class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/industrial.jpeg" alt="Linha Industrial" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Linha Industrial ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-950 mb-4">Linha Industrial</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Equipamentos industriais pesados e sistemas de alta pressão.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Poliuretano, NBR, Viton e compostos especiais.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta performance em ambientes industriais severos.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Linha%20Industrial" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 12: Anéis TC -->
-                    <div id="prod-tc" class="reveal delay-300 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/tc.jpeg" alt="Anéis TC" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full font-medium tracking-widest uppercase text-xs hidden">[ Imagem Anéis TC ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-955 mb-4">Anéis TC</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Conexões Tri-Clamp e sistemas sanitários industriais.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">Silicone, EPDM e Viton.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Alta vedação sanitária e resistência química.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Anéis%20TC" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                    <!-- Produto 13: Válvulas Borboleta -->
-                    <div id="prod-valvulas" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col h-full text-left">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/valvulas.jpeg" alt="Válvulas Borboleta" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Válvulas Borboleta ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-gray-900 mb-4">Válvulas Borboleta</h4>
-                            <div class="space-y-2 text-sm flex-grow mb-6 text-left">
-                                <p><strong class="text-ns-primary">Aplicações:</strong> <span class="text-gray-700">Controle de fluxo em sistemas industriais e tubulações.</span></p>
-                                <p><strong class="text-ns-primary">Materiais:</strong> <span class="text-gray-700">EPDM, Silicone, Viton e NBR.</span></p>
-                                <p><strong class="text-ns-primary">Vantagens:</strong> <span class="text-gray-700">Vedação eficiente, alta durabilidade and resistência química.</span></p>
-                            </div>
-                            <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20do%20produto%20Válvulas%20Borboleta" target="_blank" rel="noopener noreferrer" class="mt-auto w-full bg-ns-primary text-white py-3 rounded font-bold text-sm hover:bg-ns-primaryDark transition shadow-sm block text-center uppercase">Solicitar Orçamento</a>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 3.5. SEGMENTOS ATENDIDOS (COM PRODUTOS ASSOCIADOS CLICÁVEIS) -->
-        <section id="segmentos" class="page-section bg-white">
-            <div class="container mx-auto px-6 py-16">
-                <!-- TÍTULO ATUALIZADO DO SEGMENTO DE ACORDO COM AS ESPECIFICAÇÕES DO USUÁRIO -->
-                <div class="text-center mb-16 reveal">
-                    <span class="text-xs font-bold text-ns-accent uppercase tracking-widest block mb-2">Segmentos Atendidos</span>
-                    <h1 class="text-3xl md:text-4xl font-extrabold text-ns-primary uppercase tracking-tight">
-                        SEGMENTOS INDUSTRIAL COM SOLUÇÕES EM VEDAÇÕES INDUSTRIAIS
-                    </h1>
-                    <div class="w-16 h-1 bg-ns-accent mx-auto mt-4"></div>
-                    <h2 class="text-lg md:text-xl text-gray-700 font-semibold mt-4 max-w-3xl mx-auto leading-relaxed">
-                        Peças técnicas para vedações industriais em sistemas hidráulicos, pneumáticos, alimentícios e equipamentos industriais.
-                    </h2>
-                    <h3 class="text-sm md:text-base text-gray-500 font-medium mt-2 max-w-2xl mx-auto">
-                        Retentores, gaxetas e anéis O-Ring de alta performance para diversos setores da indústria.
-                    </h3>
-                </div>
-
-                <!-- Grade de Segmentos (Exibindo 5 setores industriais de foco, sem o automotivo) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    
-                    <!-- Segmento 1: Indústria Alimentícia -->
-                    <div class="reveal bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ns-primary/30 transition-all flex flex-col justify-between relative overflow-hidden group card-hover">
-                        <div class="absolute -right-4 -top-8 text-8xl font-black text-gray-200/50 group-hover:text-ns-primary/10 transition-colors select-none">01</div>
-                        <div>
-                            <div class="w-14 h-14 bg-blue-100 text-ns-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
-                                🍲
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-ns-primary transition-colors">Indústria Alimentícia</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Soluções em vedações para equipamentos e sistemas utilizados na indústria alimentícia, garantindo qualidade, resistência e segurança para aplicações sanitárias e industriais.</p>
-                            
-                            <!-- Lista de Produtos Recomendados do Segmento com Link Direto -->
-                            <div class="pt-4 border-t border-gray-200/60">
-                                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Produtos no Setor:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span onclick="irParaProduto('prod-retentores'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Retentores</span>
-                                    <span onclick="irParaProduto('prod-oring'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis O-Ring</span>
-                                    <span onclick="irParaProduto('prod-cordoes'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Cordões</span>
-                                    <span onclick="irParaProduto('prod-diafragmas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Diafragmas</span>
-                                    <span onclick="irParaProduto('prod-tc'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis TC</span>
-                                    <span onclick="irParaProduto('prod-valvulas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Válvulas</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <a href="https://wa.me/5511982081987?text=Olá%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20de%20vedações%20para%20a%20Indústria%20Alimentícia" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ns-primary font-bold text-xs uppercase tracking-wider hover:text-ns-accent transition-colors">
-                                Falar com especialista 
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segmento 2: Indústria Hidráulica -->
-                    <div class="reveal bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ns-primary/30 transition-all flex flex-col justify-between relative overflow-hidden group card-hover">
-                        <div class="absolute -right-4 -top-8 text-8xl font-black text-gray-200/50 group-hover:text-ns-primary/10 transition-colors select-none">02</div>
-                        <div>
-                            <div class="w-14 h-14 bg-blue-100 text-ns-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
-                                💧
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-ns-primary transition-colors">Indústria Hidráulica</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Soluções em vedação industrial para cilindros hidráulicos, prensas, bombas e equipamentos hidráulicos industriais.</p>
-                            
-                            <!-- Lista de Produtos Recomendados do Segmento com Link Direto -->
-                            <div class="pt-4 border-t border-gray-200/60">
-                                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Produtos no Setor:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span onclick="irParaProduto('prod-retentores'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Retentores</span>
-                                    <span onclick="irParaProduto('prod-gaxetas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Gaxetas</span>
-                                    <span onclick="irParaProduto('prod-oring'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis O-Ring</span>
-                                    <span onclick="irParaProduto('prod-raspadores'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Raspadores</span>
-                                    <span onclick="irParaProduto('prod-arruelas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Arruelas</span>
-                                    <span onclick="irParaProduto('prod-buchas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Buchas</span>
-                                    <span onclick="irParaProduto('prod-industrial'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Linha Industrial</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <a href="https://wa.me/5511982081987?text=Olá%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20de%20vedações%20para%20a%20Indústria%20Hidráulica" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ns-primary font-bold text-xs uppercase tracking-wider hover:text-ns-accent transition-colors">
-                                Falar com especialista 
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segmento 3: Indústria Pneumática -->
-                    <div class="reveal bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ns-primary/30 transition-all flex flex-col justify-between relative overflow-hidden group card-hover">
-                        <div class="absolute -right-4 -top-8 text-8xl font-black text-gray-200/50 group-hover:text-ns-primary/10 transition-colors select-none">03</div>
-                        <div>
-                            <div class="w-14 h-14 bg-blue-100 text-ns-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
-                                ⚙️
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-ns-primary transition-colors">Indústria Pneumática</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Retentores, gaxetas e anéis O-Ring para sistemas pneumáticos e equipamentos industriais de alta performance.</p>
-                            
-                            <!-- Lista de Produtos Recomendados do Segmento com Link Direto -->
-                            <div class="pt-4 border-t border-gray-200/60">
-                                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Produtos no Setor:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span onclick="irParaProduto('prod-retentores'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Retentores</span>
-                                    <span onclick="irParaProduto('prod-gaxetas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Gaxetas</span>
-                                    <span onclick="irParaProduto('prod-oring'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis O-Ring</span>
-                                    <span onclick="irParaProduto('prod-pecas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Peças Técnicas</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-6">
-                            <a href="https://wa.me/5511982081987?text=Olá%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20de%20vedações%20para%20a%20Indústria%20Pneumática" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ns-primary font-bold text-xs uppercase tracking-wider hover:text-ns-accent transition-colors">
-                                Falar com especialista 
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segmento 4: Indústria Química -->
-                    <div class="reveal bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ns-primary/30 transition-all flex flex-col justify-between relative overflow-hidden group card-hover">
-                        <div class="absolute -right-4 -top-8 text-8xl font-black text-gray-200/50 group-hover:text-ns-primary/10 transition-colors select-none">04</div>
-                        <div>
-                            <div class="w-14 h-14 bg-blue-100 text-ns-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
-                                🧪
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-ns-primary transition-colors">Indústria Química</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Componentes de vedação industrial resistentes para aplicações químicas agressivas e ambientes industriais severos.</p>
-                            
-                            <!-- Lista de Produtos Recomendados do Segmento com Link Direto -->
-                            <div class="pt-4 border-t border-gray-200/60">
-                                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Produtos no Setor:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span onclick="irParaProduto('prod-oring'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis O-Ring</span>
-                                    <span onclick="irParaProduto('prod-cordoes'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Cordões</span>
-                                    <span onclick="irParaProduto('prod-diafragmas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Diafragmas</span>
-                                    <span onclick="irParaProduto('prod-tc'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis TC</span>
-                                    <span onclick="irParaProduto('prod-valvulas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Válvulas</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <a href="https://wa.me/5511982081987?text=Olá%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20de%20vedações%20para%20a%20Indústria%20Química" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ns-primary font-bold text-xs uppercase tracking-wider hover:text-ns-accent transition-colors">
-                                Falar com especialista 
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Segmento 5: Indústria Farmacêutica -->
-                    <div class="reveal bg-gray-50 border border-gray-200 rounded-2xl p-8 hover:shadow-xl hover:border-ns-primary/30 transition-all flex flex-col justify-between relative overflow-hidden group card-hover">
-                        <div class="absolute -right-4 -top-8 text-8xl font-black text-gray-200/50 group-hover:text-ns-primary/10 transition-colors select-none">05</div>
-                        <div>
-                            <div class="w-14 h-14 bg-blue-100 text-ns-primary rounded-xl flex items-center justify-center mb-6 text-2xl">
-                                💊
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-ns-primary transition-colors">Indústria Farmacêutica</h3>
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Linha sanitária e peças técnicas para equipamentos farmacêuticos com alta vedação e controle de contaminação.</p>
-                            
-                            <!-- Lista de Produtos Recomendados do Segmento com Link Direto -->
-                            <div class="pt-4 border-t border-gray-200/60">
-                                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-2">Produtos no Setor:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span onclick="irParaProduto('prod-oring'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis O-Ring</span>
-                                    <span onclick="irParaProduto('prod-cordoes'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Cordões</span>
-                                    <span onclick="irParaProduto('prod-diafragmas'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Diafragmas</span>
-                                    <span onclick="irParaProduto('prod-tc'); return false;" class="text-xs bg-white text-ns-primary hover:bg-ns-primary hover:text-white px-2 py-1 rounded border border-gray-200 cursor-pointer transition font-medium">Anéis TC</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <a href="https://wa.me/5511982081987?text=Olá%20Fênix%20Vedações,%20gostaria%20de%20um%20orçamento%20de%20vedações%20para%20a%20Indústria%20Farmacêutica" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-ns-primary font-bold text-xs uppercase tracking-wider hover:text-ns-accent transition-colors">
-                                Falar com especialista 
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="w-full md:w-[55%] relative reveal delay-200">
+                    <video class="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover rounded-lg shadow-md" autoplay loop muted playsinline poster="imagens/hero.png">
+                        <source src="videos/hero.mp4" type="video/mp4">
+                    </video>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- 4. BLOG / ARTIGOS -->
-        <section id="blog" class="page-section">
-            <div class="container mx-auto px-6 py-16">
-                <!-- Título -->
-                <div class="text-center mb-16 reveal">
-                    <h1 class="text-3xl font-bold text-ns-primary uppercase">Blog Fênix Vedações</h1>
-                    <div class="w-16 h-1 bg-ns-accent mx-auto mt-4"></div>
-                    <p class="mt-4 text-gray-600 max-w-3xl mx-auto">Artigos, dicas de manutenção e novidades sobre o mundo das <strong>vedações industriais</strong>. Conteúdo técnico especializado para ajudar a otimizar os seus equipamentos.</p>
+        <!-- CARROSSEL DE PRODUTOS COMPLETO -->
+        <div class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6">
+                <div class="mb-10 text-center md:text-left reveal">
+                    <h2 class="text-3xl font-extrabold text-ns-primary uppercase mb-2">Produtos em Destaque</h2>
+                    <h3 class="text-lg text-gray-600 font-light">Retentores, gaxetas, anéis O-Ring e peças técnicas para vedação industrial em sistemas hidráulicos, pneumáticos e equipamentos industriais.</h3>
+                    <div class="w-20 h-1 bg-ns-accent mt-4 mx-auto md:md-0"></div>
                 </div>
 
-                <!-- GRADE DE ARTIGOS (Atualizada para 8 Artigos) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="relative group reveal delay-100">
+                    <!-- Botão Anterior -->
+                    <button id="prevBtnProd" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 z-10 bg-white border border-gray-200 text-ns-primary p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all hidden md:flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
                     
-                    <!-- Artigo 1 -->
-                    <article data-produto-id="prod-retentores" class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_manutencao.jpeg" alt="A Importância das Vedações" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Manutenção ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Manutenção</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">A Importância das Vedações Industriais na Prevenção de Vazamentos</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Descubra como a escolha correta de <a href="#" onclick="irParaProduto('prod-retentores'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">retentores</a> e <a href="#" onclick="irParaProduto('prod-oring'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">anéis O-Ring</a> é fundamental para evitar falhas catastróficas e vazamentos na sua linha de produção. A <strong>manutenção industrial</strong> preventiva salva equipamentos.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <!-- Conteúdo Oculto (Aberto ao clicar) -->
-                            <div class="artigo-completo hidden">
-                                <p>A <strong>vedação industrial</strong> desempenha um papel crucial e muitas vezes subestimado na manutenção de equipamentos e sistemas nas fábricas modernas. Um simples anel que falha pode ser o suficiente para parar uma linha de produção inteira, gerando enormes prejuízos. De fato, estimativas do setor de manutenção apontam que cerca de 40% das paradas não planejadas de maquinários rotativos ou hidráulicos são diretamente causadas por falhas em componentes elastoméricos de vedação.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">O Custo Oculto dos Vazamentos</h4>
-                                <p>Vazamentos não resultam apenas na perda de fluidos caros (como óleos hidráulicos sintéticos, fluidos refrigerantes ou compostos químicos). Eles também podem causar contaminação ambiental séria, gerar multas pesadas de órgãos fiscalizadores, e criar poças perigosas que colocam em risco direto a integridade física e a segurança dos colaboradores. Quando um retentor falha e deixa o óleo lubrificante escapar de um mancal, o rolamento interno começa a trabalhar a seco. Isso eleva a temperatura de atrito exponencialmente até causar o travamento total (fusão) do eixo, o que exige reparos estruturais caríssimos e demorados.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Estratégia da Manutenção Preventiva</h4>
-                                <p>A seleção correta de componentes como <a href="#" onclick="irParaProduto('prod-retentores'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">retentores</a> e <a href="#" onclick="irParaProduto('prod-oring'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">anéis O-Ring</a> assegura que as partes móveis operem sob condições projetadas de atrito controlado e zero vazamento. Além de conter os fluidos no interior do sistema, os vedantes impedem a entrada de contaminantes externos agressivos, como poeira, areia, limalha metálica, umidade ou agentes químicos dispersos no ar.</p>
-                                <p>Substituir estas vedações preventivamente, de acordo com os ciclos de trabalho calculados (MTBF), custa apenas uma fração de uma intervenção corretiva de urgência. A borracha sofre fadiga mecânica e degradação térmica natural com o tempo, perdendo sua capacidade elástica de memória. Portanto, a inspeção visual diária, o monitoramento de temperatura nos mancais e a análise regular da presença de partículas no lubrificante são práticas essenciais para determinar o momento ideal de troca.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Solução Ideal</h4>
-                                <p>Investir em elastômeros de procedência certificada e contar com apoio técnico especializado faz toda a diferença. Na Fênix Vedações, analisamos detalhadamente as variáveis operacionais do seu equipamento — temperatura de pico, velocidades lineares ou rotativas, natureza química do fluido e pressão de trabalho — para recomendar ou desenvolver a geometria exata do vedante. Com compostos modernos como Viton de alta fluorização, Nitrílica hidrogenada (HNBR) ou Poliuretano usinado de alta densidade, garantimos que a sua planta opere com máxima produtividade e confiabilidade.</p>
+                    <div class="overflow-hidden rounded-xl p-2 -m-2">
+                        <div id="carouselTrackProd" class="flex transition-transform duration-500 ease-out">
+                            <!-- Produto 1 - Retentores -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
+                                    <img src="imagens/retentores.jpeg" alt="Retentores" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex flex-col flex-grow">
+                                        <h3 class="text-xl font-bold text-ns-primary mb-3">Retentores</h3>
+                                        <p class="text-sm text-gray-600 flex-grow mb-6">Vedação dinâmica ideal para eixos rotativos, protegendo contra vazamentos e sujeiras.</p>
+                                        <a href="produtos.html#prod-retentores" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase text-center block hover:bg-ns-primaryDark transition shadow-sm">SAIBA MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Produto 2 - Gaxetas -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
+                                    <img src="imagens/gaxetas.jpeg" alt="Gaxetas" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex flex-col flex-grow">
+                                        <h3 class="text-xl font-bold text-ns-primary mb-3">Gaxetas</h3>
+                                        <p class="text-sm text-gray-600 flex-grow mb-6">Soluções robustas em vedações para sistemas hidráulicos e pneumáticos.</p>
+                                        <a href="produtos.html#prod-gaxetas" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase text-center block hover:bg-ns-primaryDark transition shadow-sm">SAIBA MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Produto 3 - Anéis O-Ring -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
+                                    <img src="imagens/oring.jpeg" alt="Anéis O-Ring" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex flex-col flex-grow">
+                                        <h3 class="text-xl font-bold text-ns-primary mb-3">Anéis O-Ring</h3>
+                                        <p class="text-sm text-gray-600 flex-grow mb-6">Vedações estática e dinâmica extremamente versátil e resistente para diversas aplicações.</p>
+                                        <a href="produtos.html#prod-oring" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase text-center block hover:bg-ns-primaryDark transition shadow-sm">SAIBA MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Produto 4 - Raspadores -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
+                                    <img src="imagens/raspadores.jpeg" alt="Raspadores" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex flex-col flex-grow">
+                                        <h3 class="text-xl font-bold text-ns-primary mb-3">Raspadores</h3>
+                                        <p class="text-sm text-gray-600 flex-grow mb-6">Proteção essencial contra a entrada de impurezas em cilindros e hastes de pistões.</p>
+                                        <a href="produtos.html#prod-raspadores" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase text-center block hover:bg-ns-primaryDark transition shadow-sm">SAIBA MAIS</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Produto 5 - Peças Técnicas -->
+                            <div class="w-full md:w-1/2 lg:w-1/3 shrink-0 px-3">
+                                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full text-left">
+                                    <img src="imagens/pecas.jpeg" alt="Peças Técnicas" class="w-full h-48 object-cover">
+                                    <div class="p-6 flex flex-col flex-grow">
+                                        <h3 class="text-xl font-bold text-ns-primary mb-3">Peças Técnicas</h3>
+                                        <p class="text-sm text-gray-600 flex-grow mb-6">Desenvolvimento de peças especiais em borracha sob medida conforme desenho ou amostra.</p>
+                                        <a href="produtos.html#prod-pecas" class="w-full bg-ns-primary text-white py-3 rounded font-bold text-sm uppercase text-center block hover:bg-ns-primaryDark transition shadow-sm">SAIBA MAIS</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </article>
-
-                    <!-- Artigo 2 -->
-                    <article class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-oring">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_oring.jpeg" alt="Anéis O-Ring" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem O-Ring ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Guias Técnicos</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">Guia Completo sobre Anéis O-Ring: Como Escolher o Material Ideal</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Os <strong>anéis O-Ring</strong> são vitais em any indústria. Entenda as diferenças entre NBR, Viton e Silicone, e como cada elastômero se comporta sob alta pressão nas soluções de <strong>vedações industriais</strong>.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Apesar de simples no seu design geométrico (um toro circular de borracha), os <a href="#" onclick="irParaProduto('prod-oring'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">anéis O-Ring</a> são um dos componentes de vedações mais críticos, eficientes e versáteis disponíveis na engenharia moderna. A sua eficácia não reside apenas no formato, mas depende inteiramente da escolha correta do elastômero em relação ao fluido, pressão e temperatura da aplicação.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Borracha Nitrílica (NBR)</h4>
-                                <p>É o material mais comum e económico do mercado. O NBR oferece excelente resistência a óleos minerais, graxas, água, fluidos hidráulicos convencionais e solventes alifáticos. É ideal para a grande maioria das aplicações standard de <strong>manutenção industrial</strong>, suportando temperaturas que variam geralmente entre -30°C e +100°C. No entanto, o NBR apresenta baixa resistência ao ozônio, intempéries e luz solar direta, além de degradar rapidamente se exposto a solventes polares, como acetona.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Viton® (FKM/FPM - Fluoroelastômero)</h4>
-                                <p>Quando a aplicação envolve temperaturas elevadas (até +200°C em regime contínuo, com picos de até +250°C) ou exposição a produtos químicos agressivos, o Viton é a melhor escolha. Ele apresenta excelente compatibilidade com combustíveis, hidrocarbonetos clorados, ácidos minerais fortes e óleos sintéticos pesados. Embora tenha um custo de aquisição superior, sua durabilidade em ambientes severos reduz significativamente o custo total de propriedade ao evitar trocas constantes.</p>
-
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Silicone (VMQ) e EPDM</h4>
-                                <p>O <a href="#" onclick="irParaProduto('prod-tc'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">Silicone</a> é preferido em situações de ampla amplitude térmica (de -50°C até +200°C) e é amplamente utilizado em conexões da linha sanitária, farmacêutica e alimentar (quando formulado como composto atóxico certificado pela FDA), pois não transmite cheiro, cor ou sabor aos fluidos. Já o <strong>EPDM</strong> é fantástico para vapor de água superaquecido, ozônio, intempéries e fluidos de freio à base de glicol. Todavia, o EPDM destrói-se e incha rapidamente se entrar em contato com óleos minerais ou derivados de petróleo.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Importância Crítica da Dureza (Shore A)</h4>
-                                <p>A dureza do material (geralmente medida na escala Shore A, variando tipicamente de 70 a 90 Shore A) determina a capacidade do anel de resistir à extrusão sob pressão. Sistemas com pressão de trabalho acima de 100 bar exigem anéis com dureza superior (90 Shore A) ou a adição de anéis anti-extrusão (Backup Rings) em teflon (PTFE) ou poliuretano para impedir que o elastômero seja empurrado e cortado nas folgas mecânicas dos alojamentos. A Fênix Vedações orienta você na escolha exata do material e da geometria para que sua máquina nunca sofra por quebras de vedação.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 3 -->
-                    <article class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-gaxetas">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_cilindros.jpeg" alt="Cilindros Hidráulicos" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Cilindros ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Hydraulics</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">Como as Gaxetas Prolongam a Vida Útil de Cilindros Hidráulicos</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Em sistemas pneumáticos e hidráulicos, as <strong>gaxetas</strong> oferecem excelente capacidade de vedações. Saiba como estas <strong>peças técnicas</strong> suportam alto atrito e garantem o funcionamento perfeito das máquinas.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Os cilindros hidráulicos e pneumáticos são a espinha dorsal de maquinaria pesada, prensas industriais, empilhadores e equipamentos de elevação. E o coração pulsante deste sistema de força e movimento reside nas <a href="#" onclick="irParaProduto('prod-gaxetas'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">gaxetas</a>, responsáveis por selar o fluido sob extrema pressão mecânica enquanto a haste se movimenta repetidamente de forma axial.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Dinâmica do Movimento Linear</h4>
-                                <p>Diferente de vedações estáticas (como tampas) ou rotativas (como eixos de motores), as gaxetas atuam num movimento linear contínuo. Elas possuem lábios flexíveis projetados inteligentemente para reagir à própria pressão do sistema: quanto maior a pressão do óleo hidráulico, mais os lábios da gaxeta se abrem e se firmam contra a haste ou a camisa do cilindro, criando uma vedação perfeita. Essa característica autovedante por pressão de contato dinâmico é o que torna a gaxeta insubstituível em sistemas de alta potência.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Poliuretano vs. Nitrílica (NBR) em Aplicações Dinâmicas</h4>
-                                <p>Utilizar o material correto muda tudo. Para sistemas hidráulicos de alta pressão (acima de 150 bar), o Poliuretano (PU) é a escolha unânime das principais montadoras e técnicos de manutenção. O PU usinado ou moldado oferece uma resistência à abrasão, corte e rasgo incrivelmente superior à borracha tradicional, suportando picos de pressão sem extrudar. Já para sistemas pneumáticos (ar comprimido) ou de hidráulica leve e de baixa pressão, as gaxetas em Borracha Nitrílica (NBR) oferecem excelente elasticidade, menor coeficiente de atrito inicial e um deslize muito mais suave, reduzindo o efeito de travamento inicial (stick-slip).</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Sinais de Desgaste e Prevenção Ativa</h4>
-                                <p>Substituir a gaxeta preventivamente evita que o óleo hidráulico contaminado com micropartículas abrasivas atue como uma lixa entre o lábio de vedação e as superfícies metálicas móveis. Se o lábio se desgasta e ocorre o contato metal-metal entre o êmbolo e a camisa, riscos profundos e permanentes serão gerados na superfície cromada da haste. Uma haste riscada destrói qualquer gaxeta nova em poucos ciclos, obrigando a empresa a gastar com cromeação, retífica ou até com a troca completa da haste e da camisa do cilindro hidráulico.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 4 -->
-                    <article class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-retentores">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_comparativo.jpeg" alt="Comparativo de Vedações" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Comparativo ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Conceitos</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">Diferenças entre Retentores e Gaxetas na Manutenção</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Muitas vezes confundidos, <strong>retentores</strong> e <strong>gaxetas</strong> têm funções distintas. Enquanto um foca em eixos rotativos, o outro brilha em movimentos lineares. Otimize as suas <strong>vedações industriais</strong> agora.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Uma dúvida muito comum para compradores, técnicos e iniciantes no momento de repor peças para manutenção é: "Devo usar um retentor ou uma gaxeta?". Apesar de ambos serem elementos essenciais das <strong>vedações industriais</strong>, as suas aplicações, dinâmica de funcionamento e conceitos de engenharia são substancialmente diferentes.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Retentores: Os Guardiões da Rotação</h4>
-                                <p>Os <a href="#" onclick="irParaProduto('prod-retentores'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">retentores</a> (também chamados de vedadores de lábio) foram concebidos primariamente para vedação de eixos com movimento <em>rotativo</em> contínuo ou oscilante, como eixos de motores elétricos, redutores, caixas de velocidades, eixos de transmissão de veículos e bombas centrífugas. Eles possuem uma estrutura rígida, geralmente composta por uma carcaça metálica externa (ou revestida de borracha) que se ajusta sob pressão ao alojamento estático, e uma mola helicoidal interna que garante que o lábio de borracha exerça uma força radial constante e controlada sobre o eixo giratório, retendo o óleo ou graxa lubrificante no sistema.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Gaxetas: A Força do Movimento Linear</h4>
-                                <p>Por outro lado, as <a href="#" onclick="irParaProduto('prod-gaxetas'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">gaxetas</a> são aplicadas quase exclusivamente em movimentos <em>lineares</em> e axiais, ou seja, no vai-e-vem de hastes de pistões e cilindros hidráulicos/pneumáticos. Elas não utilizam molas metálicas para manter a pressão de vedação. Em vez disso, o seu design geométrico em formato de "U" ou "V" utiliza a própria pressão de avanço do fluido hidráulico ou ar comprimido para forçar os lábios a expandirem contra as paredes metálicas, criando uma barreira de alta resistência.</p>
-
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Tabela Comparativa de Funcionamento</h4>
-                                <table class="min-w-full border-collapse border border-gray-300 my-4 text-sm">
-                                    <thead>
-                                        <tr class="bg-gray-100">
-                                            <th class="border border-gray-300 px-4 py-2 text-left">Característica</th>
-                                            <th class="border border-gray-300 px-4 py-2 text-left">Retentores</th>
-                                            <th class="border border-gray-300 px-4 py-2 text-left">Gaxetas</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="border border-gray-300 px-4 py-2 font-semibold">Tipo de Movimento</td>
-                                            <td class="border border-gray-300 px-4 py-2">Rotativo / Angular</td>
-                                            <td class="border border-gray-300 px-4 py-2">Linear / Alternativo</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="border border-gray-300 px-4 py-2 font-semibold">Pressão Suportada</td>
-                                            <td class="border border-gray-300 px-4 py-2">Baixa (geralmente até 0.5 bar)</td>
-                                            <td class="border border-gray-300 px-4 py-2">Alta (até 400 bar ou mais)</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="border border-gray-300 px-4 py-2 font-semibold">Elemento de Carga</td>
-                                            <td class="border border-gray-300 px-4 py-2">Mola helicoidal metálica</td>
-                                            <td class="border border-gray-300 px-4 py-2">Pressão do próprio fluido</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <p class="mt-4">Tentar adaptar um retentor num sistema de movimento linear dinâmico ou colocar uma gaxeta simples para conter óleo de um motor de rotação contínua causará vazamento imediato e destruição rápida do componente pelo excesso de atrito e temperatura gerados incorretamente.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 5 -->
-                    <article class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-raspadores">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_raspadores.jpeg" alt="Raspadores de Borracha" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Raspadores ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Proteção</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">A Função Vital dos Raspadores na Proteção de Equipamentos</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">A sujidade é a maior inimiga dos cilindros. Saiba como os <strong>raspadores</strong> atuam como a primeira linha de defesa, impedindo a entrada de particles abrasivas e protegendo <strong>anéis O-Ring</strong> e <strong>gaxetas</strong>.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Muitas vezes esquecidos ou tratados como peças de segunda categoria durante os projetos de <strong>manutenção industrial</strong>, os <a href="#" onclick="irParaProduto('prod-raspadores'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">raspadores</a> (também conhecidos como limpadores de haste) são absolutamente indispensáveis para a saúde e viabilidade a longo prazo de sistemas hidráulicos e pneumáticos.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Primeira Linha de Defesa</h4>
-                                <p>Imagine um trator, escavadeira ou cilindro de prensa operando num ambiente agressivo de poeira suspensa, cimento, siderurgia, mineração ou respingos de solda. A haste do cilindro estende-se e fica exposta à deposição contínua dessas partículas abrasivas e umidade. Quando a haste realiza o movimento de retorno e se retrai, ela tentará arrastar consigo essa contaminação para dentro do cilindro. A função exclusiva do raspador, instalado na ponta do cabeçote, é criar um contato firme com a haste, varrendo fisicamente a sujeira para fora e impedindo que ela penetre no sistema.</p>
-
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">O Efeito Destrutivo da Contaminação</h4>
-                                <p>Se o raspador estiver desgastado, trincado ou ressecado pela ação térmica, poeira de sílica ou limalha metálica microscópica passará facilmente por baixo dele. Uma vez dentro do cilindro, essas partículas atuam como um composto de lixamento abrasivo. Elas riscam a haste metálica e cortam rapidamente os delicados lábios de vedação das gaxetas e dos anéis O-Ring que estão sob alta pressão. O resultado é vazamento crônico de fluido, queda instantânea de pressão do sistema, contaminação do óleo hidráulico por poeira (o que acelera o desgaste das bombas e válvulas do circuito) e paradas inesperadas na produção.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Tipos e Compostos Modernos de Raspadores</h4>
-                                <p>Para atender às necessidades de cada indústria, existem raspadores de diferentes designs e materiais. Na Fênix Vedações, fornecemos raspadores de Poliuretano (PU) de alta resistência para aplicações com alta abrasão, raspadores com alma metálica interna (carcaça de aço) para fixação robusta em alojamentos abertos e raspadores duplos, que realizam a limpeza externa e ajudam a reter o microfilme de óleo na haste na viagem de retorno. Substituir o raspador no prazo correto é a forma mais barata e inteligente de evitar a recuperação dispendiosa de camisas e hastes de cilindros.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 6 -->
-                    <article class="reveal delay-200 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-pecas">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_pecas.jpeg" alt="Peças Técnicas" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Sob Medida ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Engenharia</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">Peças Técnicas em Borracha: A Vantagem do Fabrico Sob Medida</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Quando os padrões de mercado não servem, o desenvolvimento de <strong>peças técnicas</strong> sob medida (como <strong>arruelas</strong>, <strong>buchas</strong> e <strong>diafragmas</strong>) é a melhor solution para garantir as <strong>vedações industriais</strong> perfeitas.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Muitos equipamentos industriais em operação no mercado latino-americano são importados de fabricantes europeus, americanos ou asiáticos, e muitos deles já saíram de linha ou não possuem distribuidores locais de peças de reposição. Quando uma vedação específica de borracha quebra, tentar importar o kit original do exterior pode levar meses de importação burocrática, com o maquinário parado gerando prejuízos diários gigantescos.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">O Alto Risco das Adaptações Improvisadas</h4>
-                                <p>Na pressa de restabelecer a operação, técnicos de campo recorrem frequentemente a "gambiarras" ou adaptações, como cortar e emendar anéis inadequados ou tentar forçar a entrada de peças com medidas nominais aproximadas. Essas adaptações causam folgas ou estiramento excessivo da borracha, alterando a sua resiliência e resistência química. O resultado costuma ser uma falha catastrófica e vazamentos ainda maiores poucos dias após a partida da máquina.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">O Processo Fênix de Engenharia Reversa</h4>
-                                <p>Para solucionar esse gargalo, a Fênix Vedações desenvolveu um laboratório avançado de desenvolvimento de <a href="#" onclick="irParaProduto('prod-pecas'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">peças técnicas em borracha</a> sob medida. A partir de uma amostra gasta, danificada ou de um desenho técnico detalhado em PDF ou CAD, nossa equipe de engenharia realiza o mapeamento dimensional preciso do componente.</p>
-                                <p>Amostras antigas são analisadas quimicamente para determinar se o polímero ideal para o serviço é NBR, Viton, Silicone, Poliuretano, EPDM, Teflon ou Neoprene. A partir dessa análise, criamos a ferramentaria de vulcanização ou usinamos diretamente a peça em tornos CNC computadorizados de alta precisão. Isso permite que você obtenha peças de reposição personalizadas com qualidade idêntica ou até superior à original estrangeira, com prazo de entrega reduzido em até 90%.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 7 -->
-                    <article class="reveal bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-perfis">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_sinais.jpeg" alt="Sinais de Desgaste" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Sinais ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Dicas</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">5 Sinais de Que Chegou a Hora de Trocar as Vedações da Máquina</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Não espere pelo colapso de toda a operation. Quedas de pressão, ruídos estranhos e pequenos gotejamentos indicam que os seus <strong>retentores</strong> ou <strong>perfis de vedação</strong> precisam de substituição urgente.</p>
-                            
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <div class="artigo-completo hidden">
-                                <p>Adiar a troca de elementos vedantes e esperar que eles quebrem definitivamente é um dos maiores (e mais caros) erros na rotina de <strong>manutenção industrial</strong>. A quebra de um vedante de poucos reais pode custar dezenas de milhares de reais em componentes destruídos pelo atrito a seco ou em paradas não programadas da linha fabril. Aprenda a treinar sua equipe para estar atenta a estes 5 sintomas claros de falha iminente de vedação:</p>
-                                
-                                <ul class="list-none mt-6 space-y-6">
-                                    <li class="bg-gray-100 p-4 rounded-lg border-l-4 border-ns-accent">
-                                        <h5 class="font-bold text-lg text-ns-primary">1. Fugas Visíveis e Gotejamentos de Fluidos</h5>
-                                        <p class="text-gray-600 mt-2">O sinal mais clássico. Qualquer mancha ou poça de óleo acumulada sob redutores, motores elétricos, conexões hidráulicas ou na base das bombas indica que os lábios do <a href="#" onclick="irParaProduto('prod-retentores'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">retentor</a> perderam a memória elástica, racharam pela ação do calor, ou que a mola interna que mantinha a pressão axial quebrou pelo excesso de vibração.</p>
-                                    </li>
-                                    <li class="bg-gray-100 p-4 rounded-lg border-l-4 border-ns-accent">
-                                        <h5 class="font-bold text-lg text-ns-primary">2. Queda de Pressão Gradual ou Flutuante</h5>
-                                        <p class="text-gray-600 mt-2">Se os seus cilindros hidráulicos ou atuadores pneumáticos começaram a perder força ou velocidade de avanço, pode estar ocorrendo bypass de fluido interno pelas <a href="#" onclick="irParaProduto('prod-gaxetas'); return false;" class="text-ns-primary font-semibold underline hover:text-ns-accent">gaxetas</a> do êmbolo, fazendo com que o óleo ou ar comprimido retorne sem gerar trabalho útil.</p>
-                                    </li>
-                                    <li class="bg-gray-100 p-4 rounded-lg border-l-4 border-ns-accent">
-                                        <h5 class="font-bold text-lg text-ns-primary">3. Ruídos Estranhos e Atrito Metal-Metal</h5>
-                                        <p class="text-gray-600 mt-2">Guia sem vedação adequada provoca contato direto de componentes. Vibrações, assobios agudos ou batidas em válvulas e cilindros sugerem desgaste crítico em anéis O-Ring ou buchas internas.</p>
-                                    </li>
-                                    <li class="bg-gray-100 p-4 rounded-lg border-l-4 border-ns-accent">
-                                        <h5 class="font-bold text-lg text-ns-primary">4. Ressecamento e Trincas Estruturais na Borracha</h5>
-                                        <p class="text-gray-600 mt-2">A exposição a altas temperaturas e oxigênio altera as cadeias moleculares dos elastômeros, endurecendo-os. Vedantes rígidos perdem sua flexibilidade e não conseguem acompanhar as folgas de excentricidade do eixo.</p>
-                                    </li>
-                                    <li class="bg-gray-100 p-4 rounded-lg border-l-4 border-ns-accent">
-                                        <h5 class="font-bold text-lg text-ns-primary">5. Presença de Borra de Vedação no Filtro de Óleo</h5>
-                                        <p class="text-gray-600 mt-2">Durante a troca de filtros hidráulicos de retorno, inspecione a presença de pequenos pedaços pretos de borracha picada. Isso indica que as vedações internas estão se desintegrando fisicamente e precisam de substituição urgente.</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Artigo 8 -->
-                    <article class="reveal delay-100 bg-white border border-gray-200 rounded-xl overflow-hidden card-hover flex flex-col h-full" data-produto-id="prod-cordoes">
-                        <div class="relative w-full h-48">
-                            <img src="imagens/blog_cordoes.jpeg" alt="Cordões de Vedação" class="w-full h-48 object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                            <div class="h-48 bg-gray-200 flex items-center justify-center text-gray-500 w-full text-xs font-bold uppercase tracking-wider hidden">[ Imagem Cordões ]</div>
-                        </div>
-                        <div class="p-6 flex flex-col flex-grow">
-                            <span class="cat-label text-xs font-bold text-ns-accent uppercase tracking-wider mb-2">Materiais</span>
-                            <h3 class="art-title text-xl font-bold text-gray-900 mb-3 leading-tight hover:text-ns-primary cursor-pointer transition-colors" onclick="lerArtigo(this)">Cordões e Perfis de Vedações: Aplicações Práticas no Terreno</h3>
-                            <p class="text-sm text-gray-600 mb-6 flex-grow line-clamp-4">Saiba como os <strong>cordões</strong> contínuos e <strong>perfis de vedações</strong> extrudados oferecem uma tremenda versatilidade na hora de fazer manutenções rápidas no campo, permitindo a confecção de anéis à medida instantaneamente.</p>
-                            
-                            <!-- Botão Corrigido de Leitura Adicionado -->
-                            <a href="#" onclick="lerArtigo(this); return false;" class="text-ns-primary font-bold text-sm uppercase hover:underline mt-auto flex items-center gap-1">Ler artigo completo <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg></a>
-                            
-                            <!-- Conteúdo do Artigo 8 para Leitura Completa -->
-                            <div class="artigo-completo hidden">
-                                <p>Os <strong>cordões</strong> contínuos e os <strong>perfis de vedação</strong> representam uma das soluções mais flexíveis e cruciais no cotidiano da manutenção mecânica e industrial. Quando nos deparamos com equipamentos de grandes dimensões ou com geometrias customizadas, os anéis de catálogo padrão deixam de ser uma opção viável devido aos custos e prazos de fabricação de moldes gigantescos.</p>
-                                
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">A Solução para Grandes Diâmetros</h4>
-                                <p>Em flanges de tanques, tampas de reatores químicos, silos industriais de cimento ou escotilhas de navios, o diâmetro de vedação pode facilmente ultrapassar 1 metro. Fabricar moldes sob medida para cada uma dessas medidas seria economicamente inviável para a manutenção. É nesse cenário que o <strong>cordão de vedação</strong> em rolo contínuo brilha como o coringa da manutenção de campo.</p>
-                                <p>Cortado no comprimento exato necessário para o canal do flange, o cordão pode ser unido através de um processo de colagem técnica de alta precisão (frequentemente usando adesivos industriais à base de cianoacrilato de alta performance ou vulcanização a quente/frio no local). O cordão transforma-se em um anel O-Ring perfeitamente estanque e estável em questão de minutos, economizando dias de máquina parada.</p>
-
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Variedade de Materiais para Ambientes Críticos</h4>
-                                <p>Para assegurar o sucesso das vedações no terreno, a Fênix Vedações fornece cordões e perfis em uma ampla gama de elastômeros:</p>
-                                <ul class="list-disc list-inside space-y-2 text-gray-700 mt-2 pl-4">
-                                    <li><strong>Borracha Nitrílica (NBR):</strong> Excelente resistência a óleos minerais, combustíveis e graxas hidráulicas.</li>
-                                    <li><strong>Viton (FKM):</strong> Resistência incomparável a temperaturas de até 200°C e ataques químicos agressivos de solventes e ácidos fortes.</li>
-                                    <li><strong>Silicone (VMQ):</strong> Ideal para as indústrias alimentícia e farmacêutica devido à sua total atoxidade e ampla faixa de trabalho térmico (-50°C a +200°C).</li>
-                                    <li><strong>EPDM:</strong> Perfeito para aplicações expostas a intempéries externas, vapor de água, ozônio e ácidos diluídos.</li>
-                                </ul>
-
-                                <h4 class="text-xl font-bold text-ns-primary mt-6 mb-3">Perfis de Vedação Esponjosos e Maciços</h4>
-                                <p>Além dos cordões redondos maciços, as indústrias necessitam de geometrias complexas para portas de painéis elétricos, cabines, escotilhas e autoclaves. Os perfis de borracha esponjosa (esponjosos) oferecem alto índice de compressibilidade mecânica sob baixo torque de aperto de fechos de portas, gerando estanqueidade excelente contra poeira e jatos de água (grau de proteção IP65/IP66). Já os perfis maciços em formato de "D", "U" ou quadrado oferecem resistência mecânica excepcional a esmagamento contínuo em tampas de processo industrial pesado.</p>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 4.5. PÁGINA INTERNA DE LEITURA DO ARTIGO (OCULTA POR PADRÃO) -->
-        <section id="ler-artigo" class="page-section bg-white">
-            <div class="container mx-auto px-6 py-16 max-w-4xl">
-                <!-- Botão Voltar -->
-                <button onclick="navegar('blog')" class="text-ns-primary font-bold mb-8 hover:underline flex items-center gap-2 transition-transform transform hover:-translate-x-2">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
-                    Voltar para todos os artigos
-                </button>
-                
-                <!-- Cabeçalho do Artigo -->
-                <span id="ler-categoria" class="text-sm font-bold text-ns-accent uppercase tracking-wider mb-2 block font-semibold">Categoria</span>
-                <h1 id="ler-titulo" class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-8 leading-tight">Título do Artigo</h1>
-                
-                <!-- Corpo do Texto -->
-                <div id="ler-conteudo" class="prose max-w-none text-base md:text-lg text-gray-700 leading-relaxed space-y-6 text-justify mb-10">
-                    <!-- O conteúdo HTML armazenado no card é injetado aqui -->
-                </div>
-
-                <!-- CTA Inteligente do Produto Relacionado -->
-                <div id="ler-cta-produto-container" class="mb-10 p-6 bg-blue-50 border border-blue-100 rounded-xl flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div>
-                        <h4 class="font-bold text-ns-primary text-lg">🚀 Produto Relacionado</h4>
-                        <p class="text-sm text-gray-600">Explore nossa linha completa de <span id="ler-cta-produto-nome" class="font-bold text-ns-accent"></span> direto de fábrica.</p>
                     </div>
-                    <button id="ler-cta-produto-btn" class="bg-ns-primary hover:bg-ns-primaryDark text-white px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wider whitespace-nowrap transition-colors">
-                        Ver no Catálogo
+                    <!-- Botão Próximo -->
+                    <button id="nextBtnProd" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 z-10 bg-white border border-gray-200 text-ns-primary p-3 rounded-full shadow-lg hover:bg-gray-50 transition-all hidden md:flex">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                     </button>
                 </div>
-                
-                <!-- Call to action no final da leitura -->
-                <div class="mt-10 pt-10 border-t border-gray-200 text-center bg-gray-50 rounded-xl p-8">
-                    <h3 class="text-2xl font-bold text-ns-primary mb-4">A sua máquina não pode parar.</h3>
-                    <p class="text-gray-600 mb-6">Precisa de peças técnicas, anéis ou gaxetas para manutenção? Fale com a Fênix Vedações.</p>
-                    <a href="https://wa.me/5511982081987" target="_blank" rel="noopener noreferrer" class="inline-block bg-ns-green text-white px-10 py-4 rounded-lg font-bold text-base uppercase tracking-wide hover:bg-green-700 transition shadow-md">Falar com um especialista no WhatsApp</a>
+
+                <div class="text-center mt-10 reveal delay-200">
+                    <a href="produtos.html" class="inline-block bg-ns-primary text-white px-8 py-3.5 rounded-lg font-bold text-sm uppercase tracking-wide hover:bg-ns-primaryDark transition shadow-md">
+                        Ver todos os produtos
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- 5. CONTATO -->
-        <section id="contato" class="page-section">
-            <div class="bg-white pt-16">
-                <!-- Título -->
-                <div class="container mx-auto px-6 mb-10 text-center reveal">
-                    <h2 class="text-3xl font-bold text-ns-primary uppercase mb-4">Fale Conosco</h2>
-                    <div class="w-16 h-1 bg-ns-accent mx-auto mb-6"></div>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Entre em contato por um de nossos canais abaixo.
-                    </p>
+        <!-- AVALIAÇÕES FIXAS -->
+        <div class="bg-white py-16 border-t border-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="mb-10 text-center reveal">
+                    <p class="text-yellow-400 text-2xl mb-2">⭐⭐⭐⭐⭐</p>
+                    <h2 class="text-3xl font-extrabold text-ns-primary uppercase">O que os nossos clientes dizem</h2>
+                    <div class="w-20 h-1 bg-ns-accent mt-4 mx-auto"></div>
                 </div>
-
-                <!-- Cards de Contato (4 colunas) -->
-                <div class="container mx-auto px-6 mb-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        
-                        <!-- WhatsApp -->
-                        <div class="reveal delay-100 bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center flex flex-col items-center hover:shadow-md transition card-hover">
-                            <div class="bg-ns-green text-white p-3 rounded-full mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-ns-primary text-lg mb-2">WhatsApp e Telefone</h3>
-                            <p class="text-gray-600 text-sm mb-2">Fale conosco rapidamente:</p>
-                            <p class="text-ns-primary font-bold text-lg mb-4">(11) 98208-1987</p>
-                            <a href="https://wa.me/5511982081987" target="_blank" rel="noopener noreferrer" class="text-ns-primary font-bold text-sm uppercase hover:underline">Iniciar Conversa</a>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto reveal">
+                    <!-- Avaliação 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
+                        <div>
+                            <div class="flex text-yellow-400 mb-3 text-sm"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            <p class="text-gray-600 italic text-sm mb-4">"Atendimento excelente! Precisávamos de um lote de retentores sob medida para uma prensa que parou a produção. A equipe da Fênix Vedações nos atendeu com muita agilidade."</p>
                         </div>
-
-                        <!-- E-mail (OFICIAL RECONECTADO E CORRIGIDO SEM QUEBRA DE LINHA NO CELULAR) -->
-                        <div class="reveal delay-200 bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center flex flex-col items-center hover:shadow-md transition card-hover">
-                            <div class="bg-ns-green text-white p-3 rounded-full mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-ns-primary text-lg mb-2">E-mail</h3>
-                            <p class="text-gray-600 text-sm mb-2">Para orçamentos detalhados:</p>
-                            <!-- Corrigido para garantir que o e-mail permaneça unido em uma única linha no celular (image_3fcb47.png) -->
-                            <p class="text-ns-primary font-bold text-xs lg:text-sm whitespace-nowrap mb-4">fenixvedacoes2@terra.com.br</p>
-                            <a href="mailto:fenixvedacoes2@terra.com.br" class="text-ns-primary font-bold text-sm uppercase hover:underline">Enviar E-mail</a>
+                        <div class="border-t border-gray-100 pt-3 mt-2">
+                            <p class="font-bold text-ns-primary text-sm">— Marcelo Silva</p>
+                            <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">Avaliação no Google</p>
                         </div>
-
-                        <!-- Endereço -->
-                        <div class="reveal delay-300 bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center flex flex-col items-center hover:shadow-md transition card-hover">
-                            <div class="bg-ns-green text-white p-3 rounded-full mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-ns-primary text-lg mb-2">Nosso Endereço</h3>
-                            <p class="text-gray-600 text-sm mb-4">Itaquera, São Paulo - SP</p>
-                            <a href="#mapa" class="text-ns-primary font-bold text-sm uppercase hover:underline">Ver no mapa abaixo</a>
+                    </div>
+                    <!-- Avaliação 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
+                        <div>
+                            <div class="flex text-yellow-400 mb-3 text-sm"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            <p class="text-gray-600 italic text-sm mb-4">"Empresa séria e comprometida. Encontrei gaxetas e anéis O-Ring com medidas difíceis de achar no mercado convencional. O atendimento técnico tirou todas as minhas dúvidas."</p>
                         </div>
-
-                        <!-- Horário -->
-                        <div class="reveal delay-400 bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center flex flex-col items-center hover:shadow-md transition card-hover">
-                            <div class="bg-ns-green text-white p-3 rounded-full mb-4">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            </div>
-                            <h3 class="font-bold text-ns-primary text-lg mb-2">Horário de Atendimento</h3>
-                            <p class="text-gray-600 text-sm">
-                                <span class="block font-semibold">Segunda a Quinta:</span> 08:30 às 16:30<br>
-                                <span class="block font-semibold mt-1">Sexta:</span> 08:30 às 15:30
-                            </p>
+                        <div class="border-t border-gray-100 pt-3 mt-2">
+                            <p class="font-bold text-ns-primary text-sm">— Ana Paula Souza</p>
+                            <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">Avaliação no Google</p>
                         </div>
-
+                    </div>
+                    <!-- Avaliação 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 flex flex-col justify-between card-hover">
+                        <div>
+                            <div class="flex text-yellow-400 mb-3 text-sm"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                            <p class="text-gray-600 italic text-sm mb-4">"Parceiros de longa data! Sempre que precisamos de desenvolvimento de peças técnicas sob amostra, eles entregam com precisão milimétrica. Preço justo."</p>
+                        </div>
+                        <div class="border-t border-gray-100 pt-3 mt-2">
+                            <p class="font-bold text-ns-primary text-sm">— Ricardo Mendes</p>
+                            <p class="text-xs text-green-600 flex items-center gap-1 mt-1 font-semibold">Avaliação no Google</p>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Mapa Full Width -->
-                <div id="mapa" class="w-full h-96 bg-gray-300 relative reveal delay-200">
-                    <iframe src="https://maps.google.com/maps?q=Itaquera,+São+Paulo+-+SP&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale hover:grayscale-0 transition duration-500"></iframe>
-                </div>
             </div>
-        </section>
-
+        </div>
     </main>
 
-    <!-- FOOTER AZUL PROFISSIONAL -->
-    <footer class="bg-ns-footer text-ns-footerText pt-16 pb-8">
-        <div class="container mx-auto px-6">
-            <!-- Grid de 4 Colunas -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-                
-                <!-- COLUNA 1 - EMPRESA -->
-                <div>
-                    <h3 class="text-xl font-bold text-white mb-4">Fênix Vedações</h3>
-                </div>
-
-                <!-- COLUNA 2 - LINKS RÁPIDOS -->
-                <div>
-                    <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Links rápidos</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#inicio" onclick="navegar('inicio'); return false;" class="hover:text-white transition">Início</a></li>
-                        <li><a href="#quem-somos" onclick="navegar('quem-somos'); return false;" class="hover:text-white transition">Quem Somos</a></li>
-                        <li><a href="#produtos" onclick="navegar('produtos'); return false;" class="hover:text-white transition">Produtos</a></li>
-                        <li><a href="#segmentos" onclick="navegar('segmentos'); return false;" class="hover:text-white transition">Segmentos</a></li>
-                        <li><a href="#blog" onclick="navegar('blog'); return false;" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="#contato" onclick="navegar('contato'); return false;" class="hover:text-white transition">Contato</a></li>
-                    </ul>
-                </div>
-
-                <!-- COLUNA 3 - CONTATO -->
-                <div>
-                    <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Contato</h3>
-                    <ul class="space-y-3 text-sm text-gray-400">
-                        <!-- WhatsApp Oficial Verde -->
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#25D366] mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.1 56.8 2.1 3.1 39.3 60 95.3 84.1 13.3 5.7 23.7 9.1 31.9 11.7 13.4 4.3 25.7 3.7 35.5 2.2 10.9-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" fill="currentColor"/>
-                                </svg>
-                            </span>
-                            <span class="mt-0.5">WhatsApp: (11) 98208-1987</span>
-                        </li>
-                        <!-- Telefone Fixo / Celular (Símbolo em azul brilhante para total visibilidade no fundo escuro) -->
-                        <li class="flex items-start gap-3">
-                            <span class="text-[#60A5FA] mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                                </svg>
-                            </span>
-                            <span class="mt-0.5">Telefone: (11) 98208-1987</span>
-                        </li>
-                        <!-- E-mail (CORRIGIDO SEM QUEBRA DE LINHA NO RODAPÉ) -->
-                        <li class="flex items-start gap-3">
-                            <span class="text-gray-300 mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                                </svg>
-                            </span>
-                            <!-- Corrigido de break-all para break-words/whitespace-nowrap para manter tudo unido -->
-                            <span class="mt-0.5 break-words whitespace-nowrap">fenixvedacoes2@terra.com.br</span>
-                        </li>
-                        <!-- Endereço -->
-                        <li class="flex items-start gap-3">
-                            <span class="text-ns-accent mt-1 flex-shrink-0">
-                                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                                </svg>
-                            </span>
-                            <span class="mt-0.5">Itaquera, São Paulo - SP</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- COLUNA 4 - ATENDIMENTO -->
-                <div>
-                    <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Atendimento</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>Segunda a Quinta:<br><span class="font-bold text-white text-base">08:30 às 16:30</span></li>
-                        <li>Sexta:<br><span class="font-bold text-white text-base">08:30 às 15:30</span></li>
-                    </ul>
-                </div>
-
+    <!-- FOOTER -->
+    <footer class="bg-ns-footer text-ns-footerText pt-16 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <h3 class="text-xl font-bold text-white mb-4">Fênix Vedações</h3>
+                <p class="text-sm text-gray-400">Atuando desde 2003 no fornecimento de soluções de alta qualidade em vedações industriais.</p>
             </div>
-
-            <!-- PARTE FINAL (DIREITOS RESERVADOS) -->
-            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-                <p>© 2026 Fênix Vedações – Todos os direitos reservados</p>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Links rápidos</h3>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="index.html" class="hover:text-white transition">Início</a></li>
+                    <li><a href="quem-somos.html" class="hover:text-white transition">Quem Somos</a></li>
+                    <li><a href="produtos.html" class="hover:text-white transition">Produtos</a></li>
+                    <li><a href="segmentos.html" class="hover:text-white transition">Segmentos</a></li>
+                    <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                    <li><a href="contato.html" class="hover:text-white transition">Contato</a></li>
+                </ul>
             </div>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Contato</h3>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li class="flex items-center gap-3">
+                        <span class="text-[#25D366]">📞</span>
+                        <a href="https://wa.me/5511982081987" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">WhatsApp: (11) 98208-1987</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <span class="text-gray-300">✉️</span>
+                        <span class="break-words whitespace-nowrap">fenixvedacoes2@terra.com.br</span>
+                    </li>
+                    <li class="flex items-center gap-3"><span class="text-ns-accent">📍</span>Itaquera, São Paulo - SP</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-bold text-white mb-4 uppercase tracking-wider">Atendimento</h3>
+                <p class="text-sm text-gray-400">Segunda a Quinta: 08:30 às 16:30<br>Sexta: 08:30 às 15:30</p>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+            <p>© 2026 Fênix Vedações – Todos os direitos reservados</p>
         </div>
     </footer>
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP OFICIAL (AJUSTADO E ALINHADO COM MÁXIMA FIDELIDADE) -->
-    <a href="https://wa.me/5511982081987?text=Olá,%20Fênix%20Vedações,%20gostaria%20de%20solicitar%20uma%20cotação!" 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 z-[9999] bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
-       title="Fale conosco no WhatsApp">
-        <!-- Ícone SVG de Alta Definição Idêntico ao Logótipo Oficial (image_987200.png) -->
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
+    <a href="https://wa.me/5511982081987?text=Olá!" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-[9999] bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full shadow-2xl transition duration-300 hover:scale-110 flex items-center justify-center group" title="Fale conosco no WhatsApp">
         <svg class="w-8 h-8" viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L3 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.1 56.8 2.1 3.1 39.3 60 95.3 84.1 13.3 5.7 23.7 9.1 31.9 11.7 13.4 4.3 25.7 3.7 35.5 2.2 10.9-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
         </svg>
-        <!-- Efeito sutil de ondas de pulso por trás do botão -->
         <span class="absolute inline-flex h-full w-full rounded-full bg-[#25D366] opacity-40 animate-ping -z-10 group-hover:opacity-0 transition-opacity"></span>
     </a>
 
-    <!-- SCRIPT DE NAVEGAÇÃO -->
+    <!-- SCRIPT INLINE INJETADO PARA COMPORTAMENTO DO CARROSSEL DE PRODUTOS DA HOME (Prevenção de latência) -->
     <script>
-        // --- CONFIGURAÇÃO DE SEO DINÂMICO ---
-        const seoMap = {
-            'inicio': {
-                title: "Vedações Industriais | Fênix Vedações",
-                description: "Fabricante de retentores, gaxetas, o-rings e soluções completas em vedações industriais."
-            },
-            'quem-somos': {
-                title: "Quem Somos | Fênix Vedações",
-                description: "Conheça a nossa empresa. Especialistas em vedações industriais e peças técnicas."
-            },
-            'produtos': {
-                title: "Produtos e Peças Técnicas | Fênix Vedações",
-                description: "Catálogo completo de vedações industriais, linha sanitária e desenvolvimento de peças técnicas."
-            },
-            'segmentos': {
-                title: "Segmentos Atendidos | Fênix Vedações",
-                description: "Soluções em vedações industriais para indústria alimentícia, química, farmacêutica, hidráulica e pneumática."
-            },
-            'blog': {
-                title: "Blog de Vedações Industriais | Fênix Vedações",
-                description: "Artigos técnicos, novidades e guias sobre manutenção, retentores, O-Rings, gaxetas e vedações industriais."
-            },
-            'ler-artigo': {
-                title: "Artigo Técnico | Fênix Vedações",
-                description: "Leitura do artigo completo com dicas e guias sobre vedações industriais e manutenção."
-            },
-            'contato': {
-                title: "Contato | Fênix Vedações",
-                description: "Fale com nossos especialistas. Orçamentos e dúvidas. WhatsApp e Email disponíveis."
-            }
-        };
-
-        function atualizarSEO(secao) {
-            const dadosSEO = seoMap[secao] || seoMap['inicio']; // Fallback para inicio
-
-            // Atualiza Title
-            document.title = dadosSEO.title;
-
-            // Atualiza Meta Description
-            let metaDesc = document.querySelector("meta[name='description']");
-            if (!metaDesc) {
-                metaDesc = document.createElement("meta");
-                metaDesc.name = "description";
-                document.head.appendChild(metaDesc);
-            }
-            metaDesc.setAttribute("content", dadosSEO.description);
+      (function () {
+        const track = document.getElementById('carouselTrackProd');
+        const prevBtn = document.getElementById('prevBtnProd');
+        const nextBtn = document.getElementById('nextBtnProd');
+        if (!track || !prevBtn || !nextBtn) return;
+        const items = track.children;
+        let current = 0;
+        function getVisible() {
+          if (window.innerWidth >= 1024) return 3;
+          if (window.innerWidth >= 768) return 2;
+          return 1;
         }
-
-        // --- FUNÇÃO PARA ROLAR ATÉ O PRODUTO E DESTACÁ-LO NA GRADE ---
-        function irParaProduto(produtoId) {
-            // 1. Muda para a aba de produtos
-            navegar('produtos');
-            
-            // 2. Aguarda a transição de fade do SPA e rola suavemente até o item
-            setTimeout(() => {
-                const el = document.getElementById(produtoId);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // 3. Aplica o efeito temporário de foco com anel vermelho e zoom
-                    el.classList.add('ring-4', 'ring-ns-accent', 'scale-105', 'z-10');
-                    
-                    // 4. Remove o efeito após 2.5 segundos de forma suave
-                    setTimeout(() => {
-                        el.classList.remove('ring-4', 'ring-ns-accent', 'scale-105', 'z-10');
-                    }, 2500);
-                }
-            }, 300);
+        function update() {
+          const visible = getVisible();
+          const total = items.length;
+          const max = total - visible;
+          if (current > max) current = max;
+          if (current < 0) current = 0;
+          const pct = (100 / visible) * current;
+          track.style.transform = `translateX(-${pct}%)`;
+          prevBtn.style.opacity = current === 0 ? '0.3' : '1';
+          nextBtn.style.opacity = current >= max ? '0.3' : '1';
         }
-
-        // --- LÓGICA DO CARROSSEL DE PRODUTOS ---
-        const trackProd = document.getElementById('carouselTrackProd');
-        const prevBtnProd = document.getElementById('prevBtnProd');
-        const nextBtnProd = document.getElementById('nextBtnProd');
-        let currentIdxProd = 0;
-        let startXProd = 0;
-        let isDraggingProd = false;
-
-        function getItemsVisible() {
-            if (window.innerWidth >= 1024) return 3;
-            if (window.innerWidth >= 768) return 2;
-            return 1;
-        }
-
-        // Correção da contagem de produtos para 5 elementos ativos no carrossel
-        function updateCarouselProd() {
-            const itemsVisible = getItemsVisible();
-            const itemWidth = 100 / itemsVisible;
-            if (trackProd) {
-                trackProd.style.transform = `translateX(-${currentIdxProd * itemWidth}%)`;
-            }
-        }
-
-        if(nextBtnProd && prevBtnProd) {
-            nextBtnProd.addEventListener('click', () => {
-                const itemsVisible = getItemsVisible();
-                const totalItems = 5; 
-                if (currentIdxProd < totalItems - itemsVisible) {
-                    currentIdxProd++;
-                } else {
-                    currentIdxProd = 0; 
-                }
-                updateCarouselProd();
-            });
-
-            prevBtnProd.addEventListener('click', () => {
-                const itemsVisible = getItemsVisible();
-                const totalItems = 5;
-                if (currentIdxProd > 0) {
-                    currentIdxProd--;
-                } else {
-                    currentIdxProd = totalItems - itemsVisible;
-                }
-                updateCarouselProd();
-            });
-        }
-
-        if (trackProd) {
-            trackProd.addEventListener('touchstart', (e) => { startXProd = e.touches[0].clientX; isDraggingProd = true; });
-            trackProd.addEventListener('touchmove', (e) => { if (!isDraggingProd) return; });
-            trackProd.addEventListener('touchend', (e) => {
-                isDraggingProd = false;
-                const endX = e.changedTouches[0].clientX;
-                const diff = startXProd - endX;
-                const itemsVisible = getItemsVisible();
-                const totalItems = 5;
-                if (diff > 50) {
-                     if (currentIdxProd < totalItems - itemsVisible) currentIdxProd++; else currentIdxProd = 0;
-                } else if (diff < -50) {
-                     if (currentIdxProd > 0) currentIdxProd--; else currentIdxProd = totalItems - itemsVisible;
-                }
-                updateCarouselProd();
-            });
-        }
-
-        // --- LÓGICA DE ABERTURA DOS ARTIGOS DE BLOG ---
-        function lerArtigo(elemento) {
-            // Encontra o card pai (article) mais próximo do clique
-            const card = elemento.closest('article');
-            
-            // Puxa as informações do HTML do card clicado
-            const categoria = card.querySelector('.cat-label').innerText;
-            const titulo = card.querySelector('.art-title').innerText;
-            const conteudoCompleto = card.querySelector('.artigo-completo').innerHTML;
-            const produtoId = card.getAttribute('data-produto-id');
-
-            // Injeta as informações na página oculta "ler-artigo"
-            document.getElementById('ler-categoria').innerText = categoria;
-            document.getElementById('ler-titulo').innerText = titulo;
-            document.getElementById('ler-conteudo').innerHTML = conteudoCompleto;
-
-            // Configuração do CTA Dinâmico de Produto Relacionado
-            const ctaContainer = document.getElementById('ler-cta-produto-container');
-            if (produtoId) {
-                ctaContainer.classList.remove('hidden');
-                
-                // Mapeia amigavelmente o nome legível do produto com base no ID
-                const prodNomes = {
-                    'prod-retentores': 'Retentores Industriais',
-                    'prod-oring': 'Anéis O-Ring',
-                    'prod-gaxetas': 'Gaxetas Hidráulicas',
-                    'prod-raspadores': 'Raspadores de Cilindro',
-                    'prod-pecas': 'Peças Técnicas sob Amostra',
-                    'prod-perfis': 'Perfis de Vedações',
-                    'prod-cordoes': 'Cordões e O-Rings Contínuos',
-                    'prod-tc': 'Anéis TC (Tri-Clamp)'
-                };
-
-                document.getElementById('ler-cta-produto-nome').innerText = prodNomes[produtoId] || 'Nossas Soluções';
-                document.getElementById('ler-cta-produto-btn').onclick = function() {
-                    irParaProduto(produtoId);
-                };
-            } else {
-                ctaContainer.classList.add('hidden');
-            }
-
-            // Navega até à página e faz scroll até ao topo suavemente
-            navegar('ler-artigo');
-        }
-
-        // --- LÓGICA DO CARROSSEL DE LOGOS (PARCEIROS) ---
-        const trackLogos = document.getElementById('carouselTrackLogos');
-        let currentIdxLogos = 0;
-        let startXLogos = 0;
-        let isDraggingLogos = false;
-        let autoPlayLogosInterval;
-
-        // Função para iniciar a rotação automática dos logos (Ajustado para 4 itens no Desktop)
-        function getItemsVisibleLogos() {
-            if (window.innerWidth >= 1024) return 4; // Desktop exibe exatamente 4 cards por vez agora
-            if (window.innerWidth >= 768) return 3;  // Tablet exibe 3 cards
-            return 2;                                // Mobile exibe 2 cards
-        }
-
-        function updateCarouselLogos() {
-            const itemsVisible = getItemsVisibleLogos();
-            const itemWidth = 100 / itemsVisible;
-            if (trackLogos) {
-                trackLogos.style.transform = `translateX(-${currentIdxLogos * itemWidth}%)`;
-            }
-        }
-
-        function startAutoPlayLogos() {
-            if (autoPlayLogosInterval) clearInterval(autoPlayLogosInterval);
-            autoPlayLogosInterval = setInterval(() => {
-                const itemsVisible = getItemsVisibleLogos();
-                const totalItems = 11;
-                if (currentIdxLogos < totalItems - itemsVisible) {
-                    currentIdxLogos++;
-                } else {
-                    currentIdxLogos = 0; 
-                }
-                updateCarouselLogos();
-            }, 2500); // 2.5 segundos de intervalo
-        }
-
-        function stopAutoPlayLogos() {
-            clearInterval(autoPlayLogosInterval);
-        }
-
-        if (trackLogos) {
-            const containerLogos = trackLogos.parentElement.parentElement;
-            containerLogos.addEventListener('mouseenter', stopAutoPlayLogos);
-            containerLogos.addEventListener('mouseleave', startAutoPlayLogos);
-        }
-
-        if (trackLogos) {
-            trackLogos.addEventListener('touchstart', (e) => { 
-                stopAutoPlayLogos();
-                startXLogos = e.touches[0].clientX; 
-                isDraggingLogos = true; 
-            });
-            trackLogos.addEventListener('touchmove', (e) => { if (!isDraggingLogos) return; });
-            trackLogos.addEventListener('touchend', (e) => {
-                isDraggingLogos = false;
-                const endX = e.changedTouches[0].clientX;
-                const diff = startXLogos - endX;
-                const itemsVisible = getItemsVisibleLogos();
-                const totalItems = 11;
-                if (diff > 50) { if (currentIdxLogos < totalItems - itemsVisible) currentIdxLogos++; else currentIdxLogos = 0; }
-                else if (diff < -50) { if (currentIdxLogos > 0) currentIdxLogos--; else currentIdxLogos = totalItems - itemsVisible; }
-                updateCarouselLogos();
-                startAutoPlayLogos();
-            });
-        }
-
-        startAutoPlayLogos();
-
-        // --- RESPONSIVIDADE & SPA ---
-        window.addEventListener('resize', () => {
-            currentIdxProd = 0;
-            currentIdxLogos = 0;
-            updateCarouselProd();
-            updateCarouselLogos();
-        });
-
-        // --- LÓGICA DO REVEAL ON SCROLL (Surgimento dos Elementos) ---
-        let revealObserver;
-
-        function initReveals() {
-            const revealElements = document.querySelectorAll('.reveal');
-            revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                    }
-                });
-            }, {
-                threshold: 0.05,
-                rootMargin: "0px 0px -40px 0px"
-            });
-
-            revealElements.forEach(el => revealObserver.observe(el));
-        }
-
-        function checkReveals() {
-            const activeSection = document.querySelector('.page-section.active');
-            if (!activeSection) return;
-            
-            const activeReveals = activeSection.querySelectorAll('.reveal');
-            activeReveals.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                // Se o elemento está visível na janela do navegador, ativa a animação
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    el.classList.add('active');
-                }
-            });
-        }
-
-        function navegar(paginaId) {
-            // 1. Remove classe ativa das abas e REINICIA todas as animações reveal para re-animação instantânea
-            document.querySelectorAll('.page-section').forEach(el => {
-                el.classList.remove('active');
-                // Remove o estado de revelação para que eles "nasçam" suavemente de novo
-                el.querySelectorAll('.reveal').forEach(rev => rev.classList.remove('active'));
-            });
-
-            const secaoAlvo = document.getElementById(paginaId);
-            if (secaoAlvo) { secaoAlvo.classList.add('active'); }
-            else if (paginaId === 'conteudos-tecnicos' || paginaId === 'blog') {
-                const sect = document.getElementById('conteudos-tecnicos');
-                if(sect) sect.classList.add('active');
-            }
-            document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-            const navItem = document.getElementById('nav-' + paginaId);
-            if (navItem) { navItem.classList.add('active'); }
-            document.getElementById('mobile-menu').classList.add('hidden');
-            
-            // Rola instantaneamente ao topo para evitar "saltos" visuais
-            window.scrollTo({ top: 0, behavior: 'auto' });
-            
-            // --- ATUALIZA SEO AO NAVEGAR ---
-            atualizarSEO(paginaId);
-
-            // --- ATUALIZA A URL SEM RECARREGAR (Evita saltos) ---
-            if(history.pushState) {
-                history.pushState(null, null, '#' + paginaId);
-            } else {
-                window.location.hash = paginaId;
-            }
-
-            // --- DISPARA RE-REVELAÇÃO IMEDIATA DOS ITENS SUPERIORES DA NOVA PÁGINA ---
-            setTimeout(checkReveals, 50);
-        }
-
-        function toggleMobileMenu() {
-            document.getElementById('mobile-menu').classList.toggle('hidden');
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-            // Pega o hash da URL (ex: #produtos)
-            const hash = window.location.hash.replace('#', '');
-            
-            if (hash) { 
-                // Se tiver hash, navega para a seção correta
-                navegar(hash); 
-            } else {
-                // Se não houver hash, carrega o SEO da home por padrão
-                atualizarSEO('inicio');
-            }
-
-            // Inicia o observador de rolagem de página
-            initReveals();
-        });
+        prevBtn.addEventListener('click', () => { current--; update(); });
+        nextBtn.addEventListener('click', () => { current++; update(); });
+        window.addEventListener('resize', update);
+        update();
+      })();
     </script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

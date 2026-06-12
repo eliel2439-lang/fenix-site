@@ -1,0 +1,95 @@
+/* --- CONFIGURAÇÕES VISUAIS - FÊNIX VEDAÇÕES --- */
+:root {
+    --primary: #1E3A8A;      /* Azul Principal */
+    --primary-dark: #1E40AF; /* Azul Escuro Hover */
+    --accent: #DC2626;       /* Vermelho Destaque */
+    --green: #16A34A;        /* Verde WhatsApp */
+    --gray-light: #f4f4f5;   /* Fundo Cinza Claro */
+    --footer-bg: #0F172A;    /* Azul Escuro Footer */
+    --footer-text: #e2e8f0;  /* Texto Claro */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff !important;
+    color: #1f2937 !important;
+}
+
+/* Utilitários de Cores da Marca */
+.bg-ns-primary { background-color: var(--primary); }
+.bg-ns-primaryDark { background-color: var(--primary-dark); }
+.text-ns-primary { color: var(--primary); }
+.text-ns-accent { color: var(--accent); }
+.bg-ns-accent { background-color: var(--accent); }
+.bg-ns-gray { background-color: var(--gray-light); }
+.bg-ns-footer { background-color: var(--footer-bg); }
+.text-ns-footerText { color: var(--footer-text); }
+.bg-ns-green { background-color: var(--green); }
+
+/* --- EFEITO PREMIUM DE INTERAÇÃO DE MOUSE (CARD HOVER) --- */
+.card-hover {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, box-shadow;
+}
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 25px -5px rgba(30, 58, 138, 0.12), 0 10px 10px -5px rgba(30, 58, 138, 0.06);
+    border-color: rgba(30, 58, 138, 0.3) !important;
+}
+
+/* Estilo do Item de Menu Ativo Estático */
+.nav-item-active {
+    color: #ffffff !important;
+    font-weight: 700;
+    border-bottom: 2px solid white;
+}
+
+/* --- REVELAÇÃO SUAVE AO ROLAR (SCROLL REVEAL) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Ocultar barra de rolagem mantendo funcionalidade */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* --- FORÇA O DESIGN CLARO EM CELULARES QUE ATIVAM O MODO ESCURO AUTOMÁTICO --- */
+@media (prefers-color-scheme: dark) {
+    body, .bg-white, .page-section, main, html {
+        background-color: #ffffff !important;
+        color: #1f2937 !important;
+    }
+    .bg-gray-50 {
+        background-color: #f9fafb !important;
+    }
+    .text-gray-600 {
+        color: #4b5563 !important;
+    }
+    .text-gray-900, .text-gray-950 {
+        color: #111827 !important;
+    }
+    .border-gray-200 {
+        border-color: #e5e7eb !important;
+    }
+    h1, h2, h3, h4, h5, p, span, strong, a {
+        text-decoration-color: inherit !important;
+    }
+    .text-ns-primary {
+        color: var(--primary) !important;
+    }
+    .text-ns-accent {
+        color: var(--accent) !important;
+    }
+}
