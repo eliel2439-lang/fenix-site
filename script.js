@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // --- MENU RESPONSIVO MOBILE ---
 function initMobileMenu() {
-    const mobileBtn = document.querySelector("[id*='menu-btn'], button[class*='menu'], [data-toggle='menu']") || document.getElementById("mobile-menu-btn");    const mobileDropdown = document.getElementById("mobile-menu");
-    const mobileDropdown = document.querySelector("[id*='menu'], nav[class*='mobile'], .menu, .mobile-menu") || document.getElementById("mobile-menu");
+        const mobileBtn = document.getElementById("mobile-menu-btn");
+        const mobileDropdown = document.getElementById("mobile-menu");
     
     if (mobileBtn && mobileDropdown) {
         mobileBtn.addEventListener("click", () => {
